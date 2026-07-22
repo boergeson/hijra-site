@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Free hijrah tools: Can I move? check, cost calculator, readiness score, school finder | Hijrah to Saudi</title>
-<meta name="description" content="Interactive tools for planning hijrah to Saudi Arabia: find your visa route in 2 minutes, calculate your monthly cost of living in Jeddah, Makkah or Madinah, score your readiness, and find schools.">
+<title>Free hijrah tools: Can I move? check, cost calculator, school finder | Hijrah to Saudi</title>
+<meta name="description" content="Interactive tools for planning hijrah to Saudi Arabia: find your visa route in 2 minutes, calculate your monthly cost of living in Jeddah, Makkah or Madinah, and find schools.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 <main>
   <p class="kicker">Free tools · figures checked July 2026</p>
   <h1>Stop reading. Start checking.</h1>
-  <p class="lead">Four tools that answer the real questions in minutes: can you move, what it costs, how ready you are, and where your kids go to school. Everything runs on your phone, nothing is sent anywhere, and every number traces back to the sources in our <a href="visas.html">guides</a>.</p>
+  <p class="lead">Three tools that answer the real questions in minutes: can you move, what it costs, and where your kids go to school. Everything runs on your phone, nothing is sent anywhere, and every number traces back to the sources in our <a href="visas.html">guides</a>.</p>
 
   <!-- ============ WIZARD ============ -->
   <div class="tool" id="wizard">
@@ -114,26 +114,6 @@
 
     <button class="toolbtn" onclick="runCost()">Calculate my monthly budget</button>
     <div class="result" id="c-result"></div>
-  </div>
-
-  <!-- ============ READINESS SCORE ============ -->
-  <div class="tool" id="readiness">
-    <h2>Hijrah readiness score</h2>
-    <p>Tick what is true today. No judgement — the gaps are your to-do list.</p>
-    <div class="checklist" id="r-list">
-      <label><input type="checkbox" value="10"> Everyone's passport is valid for 2+ more years</label>
-      <label><input type="checkbox" value="10"> We have 6+ months of living costs saved</label>
-      <label><input type="checkbox" value="10"> I know which route we're taking (job, study, business or Premium Residency)</label>
-      <label><input type="checkbox" value="10"> Degrees and certificates are attested / being attested</label>
-      <label><input type="checkbox" value="10"> Marriage and birth certificates are attested and translated</label>
-      <label><input type="checkbox" value="10"> My spouse and family are genuinely on board, not just tolerating the idea</label>
-      <label><input type="checkbox" value="10"> Someone in the family has started Arabic</label>
-      <label><input type="checkbox" value="10"> We have visited Saudi Arabia at least once</label>
-      <label><input type="checkbox" value="10"> We'll have income that continues after moving (offer, business, remote arrangement, scholarship)</label>
-      <label><input type="checkbox" value="10"> We have a schooling plan for the kids (or no kids)</label>
-    </div>
-    <button class="toolbtn" onclick="runScore()">Score me</button>
-    <div class="result" id="r-result"></div>
   </div>
 
   <!-- ============ SCHOOL FINDER ============ -->
@@ -250,34 +230,6 @@ function runCost() {
   box.innerHTML = '<h3>' + cityName + ': roughly SAR ' + lo.toLocaleString() + ' – ' + hi.toLocaleString() + ' / month</h3>' +
     '<p>That is about <strong>$' + usdLo.toLocaleString() + ' – $' + usdHi.toLocaleString() + '</strong> per month, tax-free living. Includes rent, utilities, food, transport' + (levy === 'yes' && deps > 0 ? ', the SAR ' + (400 * deps).toLocaleString() + ' dependent fee' : '') + (school !== 'none' && schoolKids > 0 ? ', school fees' : '') + ' and a buffer.</p>' +
     '<p>Remember: rent here is often paid in 1–2 yearly payments up front, so arrival needs extra cash in hand. <a href="housing.html">Housing guide</a>.</p>';
-  box.classList.add('show');
-  box.scrollIntoView({behavior: 'smooth', block: 'nearest'});
-}
-
-/* ---------- readiness ---------- */
-function runScore() {
-  var boxes = document.querySelectorAll('#r-list input');
-  var score = 0, missing = [];
-  boxes.forEach(function (b) {
-    if (b.checked) { score += parseInt(b.value, 10); }
-    else { missing.push(b.parentNode.textContent.trim()); }
-  });
-  var verdict, advice;
-  if (score >= 80) {
-    verdict = 'Ready. Seriously ready.';
-    advice = 'At this stage the remaining items are weeks of work, not years. This is exactly when hands-on help pays for itself — <a href="pricing.html">book the family plan call</a> and set a date.';
-  } else if (score >= 50) {
-    verdict = 'Preparing — and further along than most.';
-    advice = 'Work the unticked list top to bottom; attestations take the longest, start those first. The <a href="visas.html">guides</a> cover every item, and a <a href="pricing.html">$49 call</a> can sequence it for your case.';
-  } else {
-    verdict = 'Early days — which is a fine place to be.';
-    advice = 'Intention first, paperwork second. Read the <a href="visas.html">four doors</a>, take the 2-minute check above, and make the scouting trip this year. May Allah make it easy.';
-  }
-  var box = document.getElementById('r-result');
-  box.innerHTML = '<h3>' + score + '/100 — ' + verdict + '</h3>' +
-    '<div class="scorebar"><div style="width:' + score + '%"></div></div>' +
-    (missing.length ? '<p><strong>Your to-do list:</strong> ' + missing.join(' · ') + '</p>' : '<p>Nothing missing. Masha\'Allah.</p>') +
-    '<p>' + advice + '</p>';
   box.classList.add('show');
   box.scrollIntoView({behavior: 'smooth', block: 'nearest'});
 }
