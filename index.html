@@ -57,6 +57,14 @@
 </div>
 
 <main>
+  <div class="tool" id="start" style="margin-top:1.4rem;">
+    <h2 style="margin-top:0.2rem;">I want to move to Saudi through…</h2>
+    <p id="t-q" class="q" style="font-size:1.05rem;"></p>
+    <div class="optrow" id="t-opts"></div>
+    <div class="result" id="t-answer"></div>
+    <p style="margin-top:0.9rem;"><a href="#" id="t-back" style="display:none; font-size:0.9rem;">← Back</a></p>
+  </div>
+
   <div class="facts">
     <strong>The honest picture first.</strong> Saudi Arabia does not hand out residency easily. For an ordinary Muslim family there are four realistic doors: a job offer, a university scholarship, a real licensed business, or money (Premium Residency). Everything else, including the tourist visa, is a visit. The good news is that every one of these doors is more open in 2026 than it has ever been, and we can tell you exactly what each one costs.
   </div>
@@ -162,6 +170,73 @@
 
   <p class="smallprint">We are a private Saudi-based relocation company, focused on the Hijaz: Jeddah, Makkah and Madinah. We are not a government agency and not affiliated with any ministry. Prices and rules on this site were checked in July 2026 against official sources; regulations change, so always confirm on the official portals we link to before acting. Photography: Wikimedia Commons, CC-licensed (credits on each image).</p>
 </main>
+
+<script>
+var WA = 'https://wa.me/966550606619?text=';
+var TREE = {
+  start: { q: 'Choose what fits you — every path gets a straight answer.', opts: [
+    ['💼 Work', 'work'], ['🎓 Study', 'study'], ['🏢 Business', 'biz'],
+    ['🏠 Property / investment', 'invest'], ['💍 Marriage', 'marriage'],
+    ['✈️ I want to visit first', 'visit'], ['🤷 Not sure yet', 'unsure']
+  ]},
+  work: { q: 'Work it is. Which describes you?', opts: [
+    ['I have a profession in demand', 'work-skilled'],
+    ['I work in office / admin / sales', 'work-office'],
+    ['I already have a Saudi job offer', 'work-offer']
+  ]},
+  'work-skilled': { a: '<h3>Good news: this is the main road.</h3><p>Healthcare, engineering, tech, teaching and academia are what Saudi imports. The employer must pay your visa and iqama fees by law, and a skilled job title lets you sponsor your family (SAR 400/month per dependent). Salaries are tax-free.</p><p><a href="jobs.html">Where to apply and what it pays</a></p>', wa: 'Salam alaikum, I have an in-demand profession and want to work in Saudi. My field is: ' },
+  'work-office': { a: '<h3>Honest answer: that door is closing.</h3><p>HR, admin, sales and customer service are being reserved for Saudi citizens. Your realistic options are retraining toward a shortage field, opening a real business, or the money routes. Better to hear it now than after a year of applications.</p><p><a href="jobs.html">The Saudization reality</a> · <a href="business.html">The business route</a></p>', wa: 'Salam alaikum, I work in an office role. What are my realistic options for hijrah? My situation: ' },
+  'work-offer': { a: '<h3>Check three things before you sign.</h3><p>One: the employer pays visa and iqama fees, by law. Two: your contract must be registered in Qiwa. Three: your exact job title decides whether your family can join you. We check all three for a flat $149.</p><p><a href="jobs.html#before-you-sign">The checks explained</a> · <a href="pricing.html">Job-offer package</a></p>', wa: 'Salam alaikum, I have a Saudi job offer and want it checked before I sign. ' },
+  study: { q: 'The student route. How old are you?', opts: [
+    ['17–25', 'study-young'], ['26 or older', 'study-older']
+  ]},
+  'study-young': { a: '<h3>You are in the golden window.</h3><p>Full scholarships at Saudi universities cover tuition, iqama, housing, healthcare, yearly flights and a monthly stipend. Zero Arabic needed — the Arabic institutes take you from nothing, with the same benefits. Applications run through one portal each spring.</p><p><a href="study.html">How to apply, step by step</a></p>', wa: 'Salam alaikum, I am 17-25 and want to apply for a Saudi university scholarship. ' },
+  'study-older': { a: '<h3>The scholarship window has an age limit, but you have routes.</h3><p>Bachelor\'s scholarships stop at 25. Over that: postgraduate tracks (master\'s under 30, PhD under 35), self-funded study, or residency through work or business with part-time knowledge study in the Haramain.</p><p><a href="study.html">All the options honestly</a></p>', wa: 'Salam alaikum, I am over 25 and interested in studying in Saudi. My situation: ' },
+  biz: { q: 'Business. What are you thinking?', opts: [
+    ['Open my own business', 'biz-own'],
+    ['Partner up with a Saudi', 'biz-partner'],
+    ['I have serious capital to invest', 'biz-invest']
+  ]},
+  'biz-own': { a: '<h3>You can own 100% of it. Legally.</h3><p>A MISA license gives full foreign ownership in most sectors, and your company sponsors your own iqama and your family. Government license fees are currently waived; realistic first-year setup is SAR 15–25k plus your business capital. Six to twelve weeks start to finish.</p><p><a href="business.html">The route, step by step</a></p>', wa: 'Salam alaikum, I want to open my own business in Saudi. My business idea: ' },
+  'biz-partner': { a: '<h3>Careful, akhi. There is one legal way and one prison way.</h3><p>A genuine registered joint venture with you as a documented shareholder: halal and fine. The common "he registers it in his name, you run it" arrangement is tasattur — up to 5 years prison, SAR 5M fines, deportation. We can connect you with real, registered partnership opportunities.</p><p><a href="business.html">Read this before anything else</a></p>', wa: 'Salam alaikum, I am interested in a legal registered partnership with a Saudi. My field: ' },
+  'biz-invest': { a: '<h3>With capital, the doors open wide.</h3><p>SAR 7M invested + 10 jobs = investor Premium Residency for a SAR 4,000 fee. Or SAR 800,000 one-time buys permanent residency for the whole family including parents. Or a SAR 4M property carries residency with it — since 2026, even in approved zones of Makkah and Madinah.</p><p><a href="visas.html#premium">Compare the money routes</a></p>', wa: 'Salam alaikum, I have capital to invest and want to discuss residency options. ' },
+  invest: { q: 'Property and investment. What interests you?', opts: [
+    ['Buy a home in Saudi', 'invest-home'],
+    ['Property in Makkah or Madinah', 'invest-haram'],
+    ['Residency through wealth', 'biz-invest']
+  ]},
+  'invest-home': { a: '<h3>Since January 2026, foreigners can buy.</h3><p>Designated zones in Riyadh and Jeddah are open to non-Saudi buyers, resident or abroad. Residents can also own one home outside the zones. And at SAR 4M+ the property carries Premium Residency with it. Everything runs through the official REGA platform.</p><p><a href="housing.html">The new law, the zones, the process</a></p>', wa: 'Salam alaikum, I am interested in buying property in Saudi. My budget and city: ' },
+  'invest-haram': { a: '<h3>This is the historic change.</h3><p>Ownership in the holy cities is now open to Muslims — only Muslims — in approved zones, whether you live in Saudi or abroad. A Muslim in Birmingham can own an apartment in Makkah with registered title. Zones are mostly the big Haram-area developments; verify everything against the REGA map before paying anyone.</p><p><a href="housing.html">Details and warnings</a></p>', wa: 'Salam alaikum, I am interested in property in Makkah or Madinah. ' },
+  marriage: { a: '<h3>We run a quiet matrimonial service.</h3><p>Written profiles, wali involved from the first message for sisters, introductions within a community that can vouch for people, and both sides serious about life in a Muslim land. Private throughout.</p><p><a href="marriage.html">How it works</a></p>', wa: 'Salam alaikum, I am interested in the marriage service. I am a (brother/sister): ' },
+  visit: { a: '<h3>Smart. Scout first.</h3><p>The tourist eVisa costs about SAR 535, lasts a year with 90 days per stay, and lets you make Umrah outside Hajj season. See Jeddah, Makkah and Madinah with your own eyes, look at schools and apartments, then decide properly. Apply only on the official portal.</p><p><a href="visas.html#tourist">Tourist visa facts</a> — and we can plan the scouting trip for $49.</p>', wa: 'Salam alaikum, I want to plan a scouting trip to the Hijaz. ' },
+  unsure: { a: '<h3>Then start with the 2-minute check.</h3><p>Four questions about your age, family, work and budget, and it tells you which of the four legal doors realistically fits. Then read the guide for your door, then talk to us.</p><p><a href="tools.html#wizard">Take the check</a> · <a href="visas.html">Or read the four doors first</a></p>', wa: 'Salam alaikum, I am not sure which route fits me. My situation: ' }
+};
+
+var tPath = ['start'];
+function tRender() {
+  var node = TREE[tPath[tPath.length - 1]];
+  var q = document.getElementById('t-q'), opts = document.getElementById('t-opts'),
+      ans = document.getElementById('t-answer'), back = document.getElementById('t-back');
+  if (node.opts) {
+    q.textContent = node.q; q.style.display = 'block';
+    opts.innerHTML = ''; opts.style.display = 'flex';
+    node.opts.forEach(function (o) {
+      var l = document.createElement('label');
+      l.textContent = o[0];
+      l.onclick = function () { tPath.push(o[1]); tRender(); };
+      opts.appendChild(l);
+    });
+    ans.classList.remove('show');
+  } else {
+    q.style.display = 'none'; opts.style.display = 'none';
+    ans.innerHTML = node.a + '<p><a class="btn wa" href="' + WA + encodeURIComponent(node.wa) + '">Talk to us about this — free first message</a></p>';
+    ans.classList.add('show');
+  }
+  back.style.display = tPath.length > 1 ? 'inline' : 'none';
+}
+document.getElementById('t-back').onclick = function (e) { e.preventDefault(); tPath.pop(); tRender(); };
+tRender();
+</script>
 
 <a class="wa-float" href="https://wa.me/966550606619" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-1.7 0-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
