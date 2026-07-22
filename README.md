@@ -1,4 +1,16 @@
-# Site draft v1 — notes for the team
+# Site draft v2 — notes for the team
+
+## v2 changes (22.7.2026, after client shared thehijrahguide.com as reference)
+
+- Warmer look: photo hero, sand/cream backgrounds, rounded cards, Poppins headings, floating WhatsApp button.
+- **Photos**: real photography from Wikimedia Commons, CC-licensed — attributions in `img/CREDITS.json`
+  (hero: Ali Mansuri CC BY-SA 2.5; Madinah: Mondephile / King Eliot; Jeddah: Joseph Azrak). Keep the credits.
+- **New `pricing.html`** — ALL PRICES ARE DRAFT PLACEHOLDERS invented to give the client something to react to
+  ($49 consultation / $99 family plan / $199 university application / $1,499 full relocation etc.).
+  Isa must set real numbers before launch.
+- **New `events.html`** — the events (Hijrah 101, student route webinar, property webinar, monthly Q&A) are
+  PROPOSED sessions with placeholder dates. The client must confirm they will actually run them before this
+  page goes live, otherwise it's advertising events that don't exist.
 
 Static HTML + one CSS file. No backend, no JS, no build step. Open `index.html` in a browser to view. Mobile-first; check it at phone width first, that's the primary view.
 

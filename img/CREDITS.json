@@ -1,0 +1,30 @@
+{
+  "hero-makkah": {
+    "file": "File:Supplicating Pilgrim at Masjid Al Haram. Mecca, Saudi Arabia.jpg",
+    "license": "CC BY-SA 2.5",
+    "artist": "Ali Mansuri",
+    "page": "https://commons.wikimedia.org/wiki/File%3ASupplicating_Pilgrim_at_Masjid_Al_Haram._Mecca%2C_Saudi_Arabia.jpg",
+    "bytes": 264452
+  },
+  "madinah": {
+    "file": "File:Al-Masjid al-Nabawi 03.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Mondephile",
+    "page": "https://commons.wikimedia.org/wiki/File%3AAl-Masjid_al-Nabawi_03.jpg",
+    "bytes": 384529
+  },
+  "madinah-umbrellas": {
+    "file": "File:Masjid e Nabawi Courtyard Umbrellas.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "King Eliot",
+    "page": "https://commons.wikimedia.org/wiki/File%3AMasjid_e_Nabawi_Courtyard_Umbrellas.jpg",
+    "bytes": 635059
+  },
+  "jeddah": {
+    "file": "File:Jeddah Corniche at night.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Joseph Azrak",
+    "page": "https://commons.wikimedia.org/wiki/File%3AJeddah_Corniche_at_night.jpg",
+    "bytes": 531908
+  }
+}
