@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free hijrah tools: Can I move? check, cost calculator, readiness score, school finder | Hijrah to Saudi</title>
+<meta name="description" content="Interactive tools for planning hijrah to Saudi Arabia: find your visa route in 2 minutes, calculate your monthly cost of living in Jeddah, Makkah or Madinah, score your readiness, and find schools.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topbar" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</div>
+<header class="site">
+  <div class="brand">
+    <a href="index.html">Hijrah to <span>Saudi</span></a>
+    <span class="ar" lang="ar" dir="rtl">الهجرة إلى بلاد الحرمين</span>
+  </div>
+</header>
+<nav class="main" aria-label="Main">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="tools.html" aria-current="page">Tools</a></li>
+    <li><a href="visas.html">Visas &amp; residency</a></li>
+    <li><a href="study.html">Study</a></li>
+    <li><a href="jobs.html">Jobs</a></li>
+    <li><a href="housing.html">Housing</a></li>
+    <li><a href="business.html">Business</a></li>
+    <li><a href="marriage.html">Marriage</a></li>
+    <li><a href="schools.html">Schools</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="community.html">Community</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <p class="kicker">Free tools · figures checked July 2026</p>
+  <h1>Stop reading. Start checking.</h1>
+  <p class="lead">Four tools that answer the real questions in minutes: can you move, what it costs, how ready you are, and where your kids go to school. Everything runs on your phone, nothing is sent anywhere, and every number traces back to the sources in our <a href="visas.html">guides</a>.</p>
+
+  <!-- ============ WIZARD ============ -->
+  <div class="tool" id="wizard">
+    <h2>Can I move to Saudi? The 2-minute check</h2>
+    <p>Answer four questions, get your realistic route. Based on the rules in the <a href="visas.html">visas guide</a>, checked July 2026 against the official portals.</p>
+
+    <p class="q">1. How old are you?</p>
+    <div class="optrow" id="w-age">
+      <label><input type="radio" name="w-age" value="young">17–25</label>
+      <label><input type="radio" name="w-age" value="mid">26–40</label>
+      <label><input type="radio" name="w-age" value="older">Over 40</label>
+    </div>
+
+    <p class="q">2. Who is moving?</p>
+    <div class="optrow" id="w-family">
+      <label><input type="radio" name="w-family" value="single">Just me</label>
+      <label><input type="radio" name="w-family" value="couple">Me and my spouse</label>
+      <label><input type="radio" name="w-family" value="kids">Family with children</label>
+    </div>
+
+    <p class="q">3. What describes your work best?</p>
+    <div class="optrow" id="w-work">
+      <label><input type="radio" name="w-work" value="health">Healthcare</label>
+      <label><input type="radio" name="w-work" value="eng">Engineering / tech</label>
+      <label><input type="radio" name="w-work" value="teach">Teacher / academic</label>
+      <label><input type="radio" name="w-work" value="office">Office / admin / sales</label>
+      <label><input type="radio" name="w-work" value="biz">I run a business</label>
+      <label><input type="radio" name="w-work" value="none">Student / between jobs</label>
+    </div>
+
+    <p class="q">4. What can you put toward the move, beyond living costs?</p>
+    <div class="optrow" id="w-money">
+      <label><input type="radio" name="w-money" value="low">Under $5,000</label>
+      <label><input type="radio" name="w-money" value="mid">$5,000–50,000</label>
+      <label><input type="radio" name="w-money" value="high">$50,000–400,000</label>
+      <label><input type="radio" name="w-money" value="rich">Over $400,000</label>
+    </div>
+
+    <button class="toolbtn" onclick="runWizard()">Show my route</button>
+    <div class="result" id="w-result"></div>
+  </div>
+
+  <!-- ============ COST CALCULATOR ============ -->
+  <div class="tool" id="cost">
+    <h2>Cost of living calculator</h2>
+    <p>Monthly budget for a rented 2–3 bedroom life in the Hijaz. Rent ranges come from the <a href="housing.html">housing guide</a>; the SAR 400 dependent fee is the official rate. Rough by design — real quotes are what our <a href="pricing.html">housing search</a> is for.</p>
+
+    <p class="q">City</p>
+    <div class="optrow" id="c-city">
+      <label><input type="radio" name="c-city" value="jeddah" checked>Jeddah</label>
+      <label><input type="radio" name="c-city" value="makkah">Makkah</label>
+      <label><input type="radio" name="c-city" value="madinah">Madinah</label>
+    </div>
+
+    <p class="q">Adults</p>
+    <div class="optrow" id="c-adults">
+      <label><input type="radio" name="c-adults" value="1" checked>1</label>
+      <label><input type="radio" name="c-adults" value="2">2</label>
+    </div>
+
+    <p class="q">Children</p>
+    <div class="optrow" id="c-kids">
+      <label><input type="radio" name="c-kids" value="0" checked>0</label>
+      <label><input type="radio" name="c-kids" value="1">1</label>
+      <label><input type="radio" name="c-kids" value="2">2</label>
+      <label><input type="radio" name="c-kids" value="3">3</label>
+      <label><input type="radio" name="c-kids" value="4">4</label>
+    </div>
+
+    <p class="q">School-age kids in international school?</p>
+    <div class="optrow" id="c-school">
+      <label><input type="radio" name="c-school" value="none" checked>No / not yet</label>
+      <label><input type="radio" name="c-school" value="budget">Budget international</label>
+      <label><input type="radio" name="c-school" value="premium">Big-name international</label>
+    </div>
+
+    <p class="q">Are you the iqama sponsor paying dependent fees?</p>
+    <div class="optrow" id="c-levy">
+      <label><input type="radio" name="c-levy" value="yes" checked>Yes (SAR 400/dependent/month)</label>
+      <label><input type="radio" name="c-levy" value="no">No (student / Premium Residency)</label>
+    </div>
+
+    <button class="toolbtn" onclick="runCost()">Calculate my monthly budget</button>
+    <div class="result" id="c-result"></div>
+  </div>
+
+  <!-- ============ READINESS SCORE ============ -->
+  <div class="tool" id="readiness">
+    <h2>Hijrah readiness score</h2>
+    <p>Tick what is true today. No judgement — the gaps are your to-do list.</p>
+    <div class="checklist" id="r-list">
+      <label><input type="checkbox" value="10"> Everyone's passport is valid for 2+ more years</label>
+      <label><input type="checkbox" value="10"> We have 6+ months of living costs saved</label>
+      <label><input type="checkbox" value="10"> I know which route we're taking (job, study, business or Premium Residency)</label>
+      <label><input type="checkbox" value="10"> Degrees and certificates are attested / being attested</label>
+      <label><input type="checkbox" value="10"> Marriage and birth certificates are attested and translated</label>
+      <label><input type="checkbox" value="10"> My spouse and family are genuinely on board, not just tolerating the idea</label>
+      <label><input type="checkbox" value="10"> Someone in the family has started Arabic</label>
+      <label><input type="checkbox" value="10"> We have visited Saudi Arabia at least once</label>
+      <label><input type="checkbox" value="10"> We'll have income that continues after moving (offer, business, remote arrangement, scholarship)</label>
+      <label><input type="checkbox" value="10"> We have a schooling plan for the kids (or no kids)</label>
+    </div>
+    <button class="toolbtn" onclick="runScore()">Score me</button>
+    <div class="result" id="r-result"></div>
+  </div>
+
+  <!-- ============ SCHOOL FINDER ============ -->
+  <div class="tool" id="schools">
+    <h2>School finder</h2>
+    <p>The schools from our <a href="schools.html">schools guide</a>, filterable. Confirm seats and fees directly or through our <a href="pricing.html">placement service</a>.</p>
+
+    <p class="q">City</p>
+    <div class="optrow" id="s-city">
+      <label><input type="radio" name="s-city" value="all" checked>All</label>
+      <label><input type="radio" name="s-city" value="Jeddah">Jeddah</label>
+      <label><input type="radio" name="s-city" value="Makkah">Makkah</label>
+      <label><input type="radio" name="s-city" value="Madinah">Madinah</label>
+    </div>
+
+    <p class="q">Curriculum</p>
+    <div class="optrow" id="s-cur">
+      <label><input type="radio" name="s-cur" value="all" checked>All</label>
+      <label><input type="radio" name="s-cur" value="British">British</label>
+      <label><input type="radio" name="s-cur" value="American">American</label>
+      <label><input type="radio" name="s-cur" value="IB">IB</label>
+      <label><input type="radio" name="s-cur" value="Islamic">Islamic ethos</label>
+    </div>
+
+    <div class="tablewrap" style="margin-top:1rem;">
+      <table id="s-table">
+        <tr><th>School</th><th>City</th><th>Curriculum</th><th>Notes</th></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>The tools say "possible". Now what?</h3>
+    <p>Now a human takes over. Send us your wizard result on WhatsApp and we will tell you if we agree, what it costs, and what to do first.</p>
+    <div class="btnrow">
+      <a class="btn wa" href="https://wa.me/966550606619?text=Salam%20alaikum%2C%20I%20did%20the%20website%20check%2C%20here%20is%20my%20situation%3A%20">WhatsApp us</a>
+      <a class="btn mail" href="mailto:isa@mvpr.org">Email isa@mvpr.org</a>
+    </div>
+  </div>
+
+  <p class="smallprint">These tools give guidance from the rules and market ranges in our guides (checked July 2026 against visa.mofa.gov.sa, pr.gov.sa, hrsd.gov.sa, studyinsaudi.moe.gov.sa, rega.gov.sa and the sources cited on each guide page). They are not legal advice and not a guarantee — regulations change and cases differ. Nothing you enter here leaves your device.</p>
+</main>
+
+<script>
+function pick(name) {
+  var el = document.querySelector('input[name="' + name + '"]:checked');
+  return el ? el.value : null;
+}
+
+/* ---------- wizard ---------- */
+function runWizard() {
+  var age = pick('w-age'), fam = pick('w-family'), work = pick('w-work'), money = pick('w-money');
+  var box = document.getElementById('w-result');
+  if (!age || !fam || !work || !money) {
+    box.innerHTML = '<h3>Answer all four first</h3><p>Each question changes the answer, that is the point of the check.</p>';
+    box.classList.add('show');
+    return;
+  }
+  var routes = [];
+  if (age === 'young') {
+    routes.push('<strong>University scholarship</strong> — you are in the golden window (17–25). Free tuition, iqama, housing and a stipend. This should be your first application, even with zero Arabic. <a href="study.html">The student route</a>.');
+  }
+  if (work === 'health' || work === 'eng' || work === 'teach') {
+    var label = work === 'health' ? 'Healthcare' : (work === 'eng' ? 'Engineering and tech' : 'Teaching');
+    routes.push('<strong>Job offer → work iqama</strong> — ' + label + ' is exactly what Saudi imports. The employer pays your visa fees by law' + (fam !== 'single' ? ', and a skilled job title lets you sponsor the family (budget SAR 400/month per dependent)' : '') + '. <a href="jobs.html">Where to apply</a>.');
+    if (work === 'health') {
+      routes.push('<strong>Special Talent Premium Residency</strong> — if your salary reaches SAR 35,000/month here, five-year sponsor-free residency costs a SAR 4,000 fee. Worth knowing before you negotiate. <a href="visas.html#premium">Details</a>.');
+    }
+  }
+  if (work === 'biz' && (money === 'mid' || money === 'high' || money === 'rich')) {
+    routes.push('<strong>Your own licensed company (MISA)</strong> — 100% foreign ownership in most sectors, you sponsor your own iqama and your family. Realistic first-year cost SAR 15–25k+ beside your business capital. <a href="business.html">The legal way</a>.');
+  }
+  if (money === 'rich') {
+    routes.push('<strong>Premium Residency</strong> — with your capital: SAR 800,000 one-time permanent residency for the whole family incl. parents, or a SAR 4M property that carries residency with it (and since 2026 that property can be in approved zones of Makkah or Madinah). <a href="visas.html#premium">Compare the tracks</a>.');
+  }
+  if (work === 'office') {
+    routes.push('<strong>Honest warning</strong> — office, admin and sales roles are being reserved for Saudi citizens. Your realistic doors are retraining toward a shortage field, a business, or capital. Talk to us before spending months on job boards. <a href="jobs.html">The Saudization reality</a>.');
+  }
+  if (routes.length === 0) {
+    routes.push('<strong>No fast door — and better to hear it now.</strong> Right now your profile fits no direct route. The plan: a scouting trip on a tourist eVisa (~SAR 535), build savings or a shortage-field skill, and keep your intention. Many families needed two years of preparation; the ones who did it properly are here now.');
+  }
+  routes.push('<strong>First step for everyone</strong> — a scouting trip. One-year multi-entry tourist eVisa, ~SAR 535, 90 days per stay. See the cities, schools and rents with your own eyes before any big decision. <a href="visas.html#tourist">Tourist visa facts</a>.');
+  box.innerHTML = '<h3>Your realistic route' + (routes.length > 2 ? 's' : '') + '</h3><p>' + routes.join('</p><p>') + '</p><p><a class="btn wa" href="https://wa.me/966550606619?text=Salam%20alaikum%2C%20I%20did%20the%202-minute%20check.%20My%20situation%3A%20age%20' + age + '%2C%20' + fam + '%2C%20work%20' + work + '%2C%20budget%20' + money + '">Check this with a human — free</a></p>';
+  box.classList.add('show');
+  box.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+}
+
+/* ---------- cost calculator ---------- */
+function runCost() {
+  var rents = { jeddah: [3200, 5500], makkah: [1500, 6000], madinah: [1000, 4000] };
+  var city = pick('c-city');
+  var adults = parseInt(pick('c-adults'), 10);
+  var kids = parseInt(pick('c-kids'), 10);
+  var school = pick('c-school');
+  var levy = pick('c-levy');
+  var lo = 0, hi = 0;
+  function add(a, b) { lo += a; hi += b; }
+  var r = rents[city];
+  add(r[0], r[1]);                                   // rent
+  add(350, 600);                                     // utilities, water, AC
+  add(250, 350);                                     // internet + mobile
+  add(900 + 350 * (adults - 1) + 250 * kids,
+      1400 + 500 * (adults - 1) + 400 * kids);       // groceries
+  add(400, 1000);                                    // transport (fuel is cheap; taxis/car cost more)
+  var deps = (adults - 1) + kids;
+  if (levy === 'yes' && deps > 0) add(400 * deps, 400 * deps);
+  var schoolKids = Math.min(kids, 4);
+  if (school === 'budget' && schoolKids > 0) add(800 * schoolKids, 1800 * schoolKids);
+  if (school === 'premium' && schoolKids > 0) add(2500 * schoolKids, 4500 * schoolKids);
+  add(Math.round(lo * 0.08), Math.round(hi * 0.10)); // buffer
+  var usdLo = Math.round(lo / 3.75), usdHi = Math.round(hi / 3.75);
+  var cityName = city.charAt(0).toUpperCase() + city.slice(1);
+  var box = document.getElementById('c-result');
+  box.innerHTML = '<h3>' + cityName + ': roughly SAR ' + lo.toLocaleString() + ' – ' + hi.toLocaleString() + ' / month</h3>' +
+    '<p>That is about <strong>$' + usdLo.toLocaleString() + ' – $' + usdHi.toLocaleString() + '</strong> per month, tax-free living. Includes rent, utilities, food, transport' + (levy === 'yes' && deps > 0 ? ', the SAR ' + (400 * deps).toLocaleString() + ' dependent fee' : '') + (school !== 'none' && schoolKids > 0 ? ', school fees' : '') + ' and a buffer.</p>' +
+    '<p>Remember: rent here is often paid in 1–2 yearly payments up front, so arrival needs extra cash in hand. <a href="housing.html">Housing guide</a>.</p>';
+  box.classList.add('show');
+  box.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+}
+
+/* ---------- readiness ---------- */
+function runScore() {
+  var boxes = document.querySelectorAll('#r-list input');
+  var score = 0, missing = [];
+  boxes.forEach(function (b) {
+    if (b.checked) { score += parseInt(b.value, 10); }
+    else { missing.push(b.parentNode.textContent.trim()); }
+  });
+  var verdict, advice;
+  if (score >= 80) {
+    verdict = 'Ready. Seriously ready.';
+    advice = 'At this stage the remaining items are weeks of work, not years. This is exactly when hands-on help pays for itself — <a href="pricing.html">book the family plan call</a> and set a date.';
+  } else if (score >= 50) {
+    verdict = 'Preparing — and further along than most.';
+    advice = 'Work the unticked list top to bottom; attestations take the longest, start those first. The <a href="visas.html">guides</a> cover every item, and a <a href="pricing.html">$49 call</a> can sequence it for your case.';
+  } else {
+    verdict = 'Early days — which is a fine place to be.';
+    advice = 'Intention first, paperwork second. Read the <a href="visas.html">four doors</a>, take the 2-minute check above, and make the scouting trip this year. May Allah make it easy.';
+  }
+  var box = document.getElementById('r-result');
+  box.innerHTML = '<h3>' + score + '/100 — ' + verdict + '</h3>' +
+    '<div class="scorebar"><div style="width:' + score + '%"></div></div>' +
+    (missing.length ? '<p><strong>Your to-do list:</strong> ' + missing.join(' · ') + '</p>' : '<p>Nothing missing. Masha\'Allah.</p>') +
+    '<p>' + advice + '</p>';
+  box.classList.add('show');
+  box.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+}
+
+/* ---------- school finder ---------- */
+var SCHOOLS = [
+  ['British International School of Jeddah', 'Jeddah', ['British', 'IB'], 'Est. 1977, Nursery–Y13', 'https://www.bis-jeddah.com'],
+  ['American International School of Jeddah', 'Jeddah', ['American'], 'Est. 1952, Pre-K–G12', 'https://www.aisj.edu.sa'],
+  ['Jeddah Prep and Grammar School', 'Jeddah', ['British'], '~50 years of British curriculum', 'https://www.jpgs.org'],
+  ['Waad Academy', 'Jeddah', ['British', 'Islamic'], 'British curriculum + Islamic studies', 'https://www.waad.com.sa'],
+  ['Alwadi International School', 'Jeddah', ['British'], 'Cambridge/Edexcel, est. 1998', 'https://www.alwadischool.com'],
+  ['Yusr International School', 'Makkah', ['IB', 'Islamic'], 'IB PYP, bilingual EN-AR, Al Hamra', ''],
+  ['Al Fursan International', 'Makkah', ['American'], 'American-based, Al Shawqiyya', ''],
+  ['Ajyal Al Haditha International', 'Madinah', ['British', 'Islamic'], 'Cambridge/Edexcel/FBISE, Islamic ethos', 'https://ajyalschool.edu.sa'],
+  ['MADAC School', 'Madinah', ['IB'], 'IB, dual EN-AR mastery', 'https://madac.edu.sa'],
+  ['Dar-ul-Madinah International', 'Madinah', ['Islamic'], 'Islamic + international academics', 'https://www.darulmadinah.net'],
+  ['Manarat Al Madinah', 'Madinah', ['American', 'Islamic'], 'KG–G12, Islamic values', '']
+];
+
+function renderSchools() {
+  var city = pick('s-city'), cur = pick('s-cur');
+  var rows = '<tr><th>School</th><th>City</th><th>Curriculum</th><th>Notes</th></tr>';
+  var n = 0;
+  SCHOOLS.forEach(function (s) {
+    if (city !== 'all' && s[1] !== city) return;
+    if (cur !== 'all' && s[2].indexOf(cur) === -1) return;
+    var name = s[4] ? '<a href="' + s[4] + '" rel="noopener">' + s[0] + '</a>' : s[0];
+    rows += '<tr><td>' + name + '</td><td>' + s[1] + '</td><td>' + s[2].join(', ') + '</td><td>' + s[3] + '</td></tr>';
+    n++;
+  });
+  if (n === 0) rows += '<tr><td colspan="4">No match — in Makkah especially, many families use Jeddah schools (40–60 min). <a href="contact.html">Ask us</a>.</td></tr>';
+  document.getElementById('s-table').innerHTML = rows;
+}
+
+document.querySelectorAll('#s-city input, #s-cur input').forEach(function (i) {
+  i.addEventListener('change', renderSchools);
+});
+renderSchools();
+</script>
+
+<a class="wa-float" href="https://wa.me/966550606619" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-1.7 0-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
+</a>
+
+<footer class="site">
+  <div class="inner">
+    <p><strong>Hijrah to Saudi</strong> · Makkah &amp; Jeddah · <a href="https://wa.me/966550606619">WhatsApp +966 55 060 6619</a> · <a href="mailto:isa@mvpr.org">isa@mvpr.org</a></p>
+    <p>Guides: <a href="visas.html">Visas</a> · <a href="study.html">Study</a> · <a href="jobs.html">Jobs</a> · <a href="housing.html">Housing</a> · <a href="business.html">Business</a> · <a href="marriage.html">Marriage</a> · <a href="schools.html">Schools</a> · <a href="events.html">Events</a> · <a href="pricing.html">Pricing</a> · <a href="community.html">Community</a></p>
+    <p class="ar" lang="ar" dir="rtl">اللهم يسِّر ولا تعسِّر</p>
+  </div>
+</footer>
+</body>
+</html>
