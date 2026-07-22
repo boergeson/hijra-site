@@ -18,7 +18,7 @@
   --line: #e6e1d5;
   --green-wa: #1fa855;
   --white: #ffffff;
-  --radius: 12px;
+  --radius: 0;
   --shadow: 0 0 0 1px var(--line);
 }
 
@@ -185,7 +185,7 @@ li { margin: 0.25rem 0; }
 }
 
 .card { padding: 0.8rem 0.8rem 0; }
-.card img { width: 100%; height: 12rem; object-fit: cover; display: block; border-radius: 999px 999px var(--radius) var(--radius); }
+.card img { width: 100%; height: 12rem; object-fit: cover; display: block; border-radius: 0; }
 
 .card .pad { padding: 0.9rem 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.3rem; flex: 1; }
 
@@ -245,7 +245,7 @@ li { margin: 0.25rem 0; }
   color: var(--white);
   font-family: Inter, sans-serif;
   font-weight: 700;
-  border-radius: 10px;
+  border-radius: 0;
   padding: 0.45rem 0.7rem;
   text-align: center;
   font-size: 0.85rem;
@@ -263,7 +263,7 @@ li { margin: 0.25rem 0; }
   background: var(--yellow-pale);
   color: var(--yellow-deep);
   font-weight: 700; font-size: 0.78rem;
-  padding: 0.15rem 0.55rem; border-radius: 999px;
+  padding: 0.15rem 0.55rem; border-radius: 0;
 }
 
 /* ---------- info boxes ---------- */
@@ -272,7 +272,7 @@ li { margin: 0.25rem 0; }
   background: transparent;
   border: 1px solid var(--line);
   border-left: 3px solid var(--teal);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-radius: 0;
   padding: 0.8rem 1rem;
   margin: 1rem 0;
   font-size: 0.94rem;
@@ -284,7 +284,7 @@ li { margin: 0.25rem 0; }
   background: transparent;
   border: 1px solid var(--line);
   border-left: 3px solid var(--yellow);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-radius: 0;
   padding: 0.8rem 1rem;
   margin: 1rem 0;
   font-size: 0.94rem;
@@ -327,7 +327,7 @@ tr:last-child td { border-bottom: none; }
 .btn {
   display: inline-block;
   padding: 0.6rem 1.1rem;
-  border-radius: 999px;
+  border-radius: 0;
   text-decoration: none;
   font-weight: 700;
   font-size: 0.95rem;
@@ -348,7 +348,7 @@ tr:last-child td { border-bottom: none; }
 
 .wa-float {
   position: fixed; right: 1rem; bottom: 1rem; z-index: 50;
-  width: 3.4rem; height: 3.4rem; border-radius: 50%;
+  width: 3.4rem; height: 3.4rem; border-radius: 0;
   background: var(--green-wa);
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 16px rgba(0,0,0,0.3);
@@ -415,7 +415,7 @@ footer.site .ar { color: #8fa5c4; margin-top: 0.8rem; }
 
 .optrow label {
   border: 2px solid var(--line);
-  border-radius: 999px;
+  border-radius: 0;
   padding: 0.35rem 0.85rem;
   cursor: pointer;
   font-size: 0.92rem;
@@ -442,7 +442,7 @@ footer.site .ar { color: #8fa5c4; margin-top: 0.8rem; }
 .toolbtn {
   font-family: Inter, sans-serif;
   background: var(--yellow); color: var(--blue-dark);
-  border: none; border-radius: 999px;
+  border: none; border-radius: 0;
   padding: 0.65rem 1.3rem; font-size: 1rem; font-weight: 700;
   cursor: pointer; margin-top: 1rem; box-shadow: var(--shadow);
 }
@@ -454,7 +454,7 @@ footer.site .ar { color: #8fa5c4; margin-top: 0.8rem; }
   margin-top: 1.1rem;
   border-left: 5px solid var(--yellow);
   background: var(--yellow-pale);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-radius: 0;
   padding: 0.9rem 1rem;
 }
 
@@ -463,15 +463,15 @@ footer.site .ar { color: #8fa5c4; margin-top: 0.8rem; }
 .result h3 { margin-top: 0; }
 
 .scorebar {
-  height: 1.1rem; border-radius: 999px; background: var(--line);
+  height: 1.1rem; border-radius: 0; background: var(--line);
   overflow: hidden; margin: 0.5rem 0;
 }
 
-.scorebar div { height: 100%; background: var(--blue); border-radius: 999px; transition: width 0.5s; }
+.scorebar div { height: 100%; background: var(--blue); border-radius: 0; transition: width 0.5s; }
 
 .num {
   width: 7rem; padding: 0.45rem 0.6rem; font-size: 1rem;
-  border: 2px solid var(--line); border-radius: 8px;
+  border: 2px solid var(--line); border-radius: 0;
 }
 
 .stages { display: grid; gap: 0.7rem; margin: 1.2rem 0; }
