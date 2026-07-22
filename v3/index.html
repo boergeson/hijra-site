@@ -22,7 +22,7 @@
 
 html, body { height: 100%; }
 
-.topbar { font-size: 0.8rem; color: var(--ink-soft); text-align: right; padding: 0.35rem 1.4rem 0; }
+.topbar { font-size: 0.8rem; color: var(--ink-soft); text-align: right; padding: 0.35rem 1rem 0; }
 
 body {
   font-family: Inter, "Segoe UI", system-ui, sans-serif;
@@ -35,17 +35,19 @@ body {
 
 header {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 1.1rem 1.4rem;
+  gap: 0.4rem 1.2rem; flex-wrap: wrap;
+  padding: 0.8rem 1rem;
 }
 
 .mark { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; color: var(--ink); }
 
 .mark svg { width: 1.5rem; height: 1.5rem; }
 
-.mark b { font-weight: 900; letter-spacing: -0.02em; }
+.mark b { font-weight: 900; letter-spacing: -0.02em; font-size: 1.3rem; }
+.mark b span { color: #a8871f; }
 
-header nav { display: flex; gap: 0.9rem; flex-wrap: wrap; }
-header nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.88rem; }
+header nav { display: flex; gap: 0 0.3rem; flex-wrap: wrap; }
+header nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.88rem; padding: 0.2rem 0.45rem; }
 header nav a:hover { color: var(--teal); }
 header nav a.on { color: var(--teal); font-weight: 700; }
 
@@ -147,17 +149,22 @@ footer a { color: var(--ink-soft); }
 @media (min-width: 700px) {
   .opts.grid { display: grid; grid-template-columns: 1fr 1fr; }
 }
+
+@media (min-width: 760px) {
+  header { padding-left: max(1rem, calc((100% - 62rem) / 2)); padding-right: max(1rem, calc((100% - 62rem) / 2)); }
+  .topbar { padding-right: max(1rem, calc((100% - 62rem) / 2)); }
+}
 </style>
 </head>
 <body>
 <div class="topbar" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</div>
 <header>
   <a class="mark" href="./">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5">
       <rect x="5.2" y="5.2" width="13.6" height="13.6"/>
       <rect x="5.2" y="5.2" width="13.6" height="13.6" transform="rotate(45 12 12)"/>
     </svg>
-    <b>Hijrah to Saudi</b>
+    <b>Hijrah to <span>Saudi</span></b>
   </a>
   <nav>
     <a class="on" href="./">Start</a>
