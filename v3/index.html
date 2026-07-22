@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hijrah to Saudi — what do you want? | Hijrah to Saudi</title>
+<title>Make hijrah to Saudi Arabia | Hijrah to Saudi</title>
 <meta name="description" content="Moving to Saudi Arabia, done properly. Answer two questions and get your route: work, study, business, property or marriage. Real 2026 prices. Team on the ground in the Hijaz.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
@@ -69,7 +69,9 @@ h1 {
   margin-bottom: 0.7rem;
 }
 
-.sub { color: var(--ink-soft); font-size: 1.02rem; max-width: 34rem; margin-bottom: 2rem; }
+.sub { color: var(--ink-soft); font-size: 1.02rem; max-width: 34rem; margin-bottom: 1.6rem; }
+
+.qline { font-weight: 800; font-size: 1.2rem; margin-bottom: 0.9rem; }
 
 .opts { display: flex; flex-direction: column; gap: 0.55rem; }
 
@@ -145,7 +147,8 @@ footer a { color: var(--ink-soft); }
 <header>
   <a class="mark" href="./">
     <svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5">
-      <path d="M12 2l2.6 4.8L20 4l-1.2 5.4L24 12l-5.2 2.6L20 20l-5.4-1.2L12 24l-2.6-5.2L4 20l1.2-5.4L0 12l5.2-2.6L4 4l5.4 1.2z" transform="scale(0.92) translate(1,1)"/>
+      <rect x="5.2" y="5.2" width="13.6" height="13.6"/>
+      <rect x="5.2" y="5.2" width="13.6" height="13.6" transform="rotate(45 12 12)"/>
     </svg>
     <b>Hijrah to Saudi</b>
   </a>
@@ -167,14 +170,14 @@ footer a { color: var(--ink-soft); }
 var WA = 'https://wa.me/966550606619?text=';
 
 var TREE = {
-  start: { step: 'Question 1', h: 'What do you want?', sub: 'Moving to Saudi Arabia, done properly. Two questions, then your route with real prices.', grid: true, opts: [
+  start: { step: 'Jeddah · Makkah · Madinah', h: 'Make hijrah to Saudi.', sub: 'Two questions. Then your route, with real 2026 prices, from a team that lives here.', q: 'What do you want?', grid: true, opts: [
     ['Work here', 'work'], ['Study here', 'study'], ['Build a business', 'biz'], ['Buy property', 'invest'], ['Get married', 'marriage'], ['Visit first', 'visit'], ['Guide me', 'unsure']
   ]},
   work: { step: 'Question 2', h: 'Who are you?', sub: 'The work route lives or dies on your profession.', opts: [
     ['Doctor, nurse, engineer, teacher, tech', 'work-skilled'], ['Office, admin, sales', 'work-office'], ['I already hold a Saudi job offer', 'work-offer'], ['← Back', 'start']
   ]},
   'work-skilled': { a: true, h: 'Saudi is hiring you.', p: [
-    'These are the shortage fields. Tax-free salaries — licensed teachers make <b>SAR 12–25k a month</b> plus housing. The employer pays your visa and iqama by law, and a skilled title lets your family join you.',
+    'These are the shortage fields. Tax-free salaries: licensed teachers make <b>SAR 12–25k a month</b> plus housing. The employer pays your visa and iqama by law, and a skilled title lets your family join you.',
     'Next step: your CV on the right desks. We know which desks.'
   ], btns: [['Talk to us', 'Salam alaikum, I work in an in-demand field and want to move. My profession: ', 'wa'], ['Jobs guide', '../jobs.html', 'side']] },
   'work-office': { a: true, h: 'That door is closing. Hear it now.', p: [
@@ -182,18 +185,18 @@ var TREE = {
     'Real options: retrain toward a shortage field, open a licensed business, or the investment routes. Brothers have pivoted and are here now.'
   ], btns: [['My options', 'Salam alaikum, I work in an office role. What are my realistic options? ', 'wa'], ['The business route', '../business.html', 'side']] },
   'work-offer': { a: true, h: 'Three checks before you sign.', p: [
-    '<b>One:</b> the employer pays visa and iqama fees — by law. <b>Two:</b> the contract must be registered in Qiwa. <b>Three:</b> your exact job title decides whether your family can come.',
+    '<b>One:</b> the employer pays visa and iqama fees, by law. <b>Two:</b> the contract must be registered in Qiwa. <b>Three:</b> your exact job title decides whether your family can come.',
     'We run all three for a flat <b>$149</b>. Cheaper than one wrong signature.'
   ], btns: [['Check my offer', 'Salam alaikum, I have a Saudi job offer and want it checked. ', 'wa'], ['The checks', '../jobs.html', 'side']] },
   study: { step: 'Question 2', h: 'How old are you?', sub: 'One rule decides the whole student route.', opts: [
     ['17–25', 'study-young'], ['26 or older', 'study-older'], ['← Back', 'start']
   ]},
   'study-young': { a: true, h: 'The golden window.', p: [
-    'Full scholarships: <b>free tuition, iqama, housing, healthcare, flights, monthly stipend</b>. Zero Arabic needed — the universities teach you from nothing, funded from day one. Madinah, Makkah, Jeddah.',
+    'Full scholarships: <b>free tuition, iqama, housing, healthcare, flights, monthly stipend</b>. Zero Arabic needed. The universities teach you from nothing, funded from day one. Madinah, Makkah, Jeddah.',
     'One government portal, one application window each spring. We track it and handle applications for <b>$199</b>.'
   ], btns: [['Help me apply', 'Salam alaikum, I am 17-25 and want a scholarship. ', 'wa'], ['Student guide', '../study.html', 'side']] },
   'study-older': { a: true, h: 'That window closed at 25.', p: [
-    'Straight answer. Still open: master\'s under 30, PhD under 35, self-funded study, or residency through work or business — and the study circles of the Haramain are free for every resident.'
+    'Straight answer. Still open: master\'s under 30, PhD under 35, self-funded study, or residency through work or business. And the study circles of the Haramain are free for every resident.'
   ], btns: [['My situation', 'Salam alaikum, I am over 25 and interested in studying in Saudi. ', 'wa'], ['All options', '../study.html', 'side']] },
   biz: { step: 'Question 2', h: 'Which one is you?', sub: 'There is a right way and a prison way. We only do the right way.', opts: [
     ['I want to own my business', 'biz-own'], ['I want a Saudi partner', 'biz-partner'], ['I have serious capital', 'biz-invest'], ['← Back', 'start']
@@ -202,11 +205,11 @@ var TREE = {
     'A MISA license gives full foreign ownership in most sectors. Your company sponsors your iqama and your family. License fees currently waived; realistic setup <b>SAR 15–25k</b> plus your capital. Six to twelve weeks.'
   ], btns: [['My business idea', 'Salam alaikum, I want to open a business in Saudi. My idea: ', 'wa'], ['Business guide', '../business.html', 'side']] },
   'biz-partner': { a: true, h: 'Careful. One way is halal. One is five years in prison.', p: [
-    'A registered joint venture with your name on the papers: fine. The famous "his name, your business, monthly fee" arrangement is <b>tasattur</b> — up to 5 years, SAR 5M fine, deportation. Enforcement is real.',
+    'A registered joint venture with your name on the papers: fine. The famous "his name, your business, monthly fee" arrangement is <b>tasattur</b> (up to 5 years, SAR 5M fine, deportation). Enforcement is real.',
     'We connect people to the registered kind only.'
   ], btns: [['Legal partnership', 'Salam alaikum, I want a legal registered partnership. My field: ', 'wa'], ['Read first', '../business.html', 'side']] },
   'biz-invest': { a: true, h: 'Capital opens every door.', p: [
-    '<b>SAR 800,000</b> once: permanent residency, family included, parents included. <b>SAR 4M</b> in property: residency that lasts while you own it — since 2026 even in approved zones of Makkah and Madinah. <b>SAR 7M</b> invested + 10 jobs: investor residency, SAR 4,000 fee.',
+    '<b>SAR 800,000</b> once: permanent residency, family included, parents included. <b>SAR 4M</b> in property: residency that lasts while you own it. Since 2026 even in approved zones of Makkah and Madinah. <b>SAR 7M</b> invested + 10 jobs: investor residency, SAR 4,000 fee.',
     'At this level you talk to people, not websites.'
   ], btns: [['Speak to us', 'Salam alaikum, I have capital and want to discuss residency. ', 'wa'], ['Compare routes', '../visas.html#premium', 'side']] },
   invest: { step: 'Question 2', h: 'Where?', sub: 'Foreign ownership opened in January 2026. The rules differ by city.', opts: [
@@ -217,7 +220,7 @@ var TREE = {
     'Everything runs through the official REGA platform. We verify zones and developers before money moves.'
   ], btns: [['My budget', 'Salam alaikum, I want to buy property. My budget and city: ', 'wa'], ['Housing guide', '../housing.html', 'side']] },
   'invest-haram': { a: true, h: 'The holy cities. Muslims only. Historic.', p: [
-    'For the first time, Muslims — resident or abroad — can hold registered title in approved zones of Makkah and Madinah. The zones are the big Haram-area developments. Prices are serious. So are the scammers selling "pre-launch" units.',
+    'For the first time, Muslims, resident or abroad, can hold registered title in approved zones of Makkah and Madinah. The zones are the big Haram-area developments. Prices are serious. So are the scammers selling "pre-launch" units.',
     'Verify against the REGA map, or let us do it.'
   ], btns: [['Verify a project', 'Salam alaikum, I am interested in property near the Haramain. ', 'wa'], ['Details', '../housing.html', 'side']] },
   marriage: { a: true, h: 'Quiet, vetted, wali involved.', p: [
@@ -229,7 +232,7 @@ var TREE = {
     'We plan scouting trips for <b>$49</b>: areas, appointments, people worth meeting.'
   ], btns: [['Plan my trip', 'Salam alaikum, I want to plan a scouting trip to the Hijaz. ', 'wa'], ['Visa facts', '../visas.html#tourist', 'side']] },
   unsure: { a: true, h: 'Four doors. That is the whole truth.', p: [
-    'A job. A scholarship. A real business. Or money. Everything else is a visit — including the tourist visa.',
+    'A job. A scholarship. A real business. Or money. Everything else is a visit, including the tourist visa.',
     'Tell us who you are and we will point at your door. First message costs nothing.'
   ], btns: [['My situation', 'Salam alaikum, I am not sure which route fits me. My situation: ', 'wa'], ['The 2-minute check', '../tools.html#wizard', 'side']] }
 };
@@ -244,6 +247,7 @@ function render() {
     h += '<div class="step">' + node.step + '</div>';
     h += '<h1>' + node.h + '</h1>';
     if (node.sub) h += '<p class="sub">' + node.sub + '</p>';
+    if (node.q) h += '<p class="qline">' + node.q + '</p>';
     h += '<div class="opts' + (node.grid ? ' grid' : '') + '">' + node.opts.map(function (o, i) {
       return '<button data-i="' + i + '">' + o[0] + '</button>';
     }).join('') + '</div>';
