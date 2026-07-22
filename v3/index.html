@@ -13,6 +13,7 @@
   --ink: #0e2c57;
   --ink-soft: #5a6b84;
   --gold: #c9a227;
+  --teal: #2c6e63;
   --line: #e3ded2;
   --wa: #1fa855;
 }
@@ -20,6 +21,8 @@
 * { box-sizing: border-box; margin: 0; }
 
 html, body { height: 100%; }
+
+.topbar { font-size: 0.8rem; color: var(--ink-soft); text-align: right; padding: 0.35rem 1.4rem 0; }
 
 body {
   font-family: Inter, "Segoe UI", system-ui, sans-serif;
@@ -41,14 +44,17 @@ header {
 
 .mark b { font-weight: 900; letter-spacing: -0.02em; }
 
-header .ar { font-size: 0.85rem; color: var(--ink-soft); }
+header nav { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+header nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.88rem; }
+header nav a:hover { color: var(--teal); }
+header nav a.on { color: var(--teal); font-weight: 700; }
 
 main {
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 1.2rem 1.4rem 3rem;
+  padding: 3rem 1.4rem 2.4rem;
 }
 
 .screen { width: 100%; max-width: 40rem; animation: rise 0.35s ease; }
@@ -144,7 +150,7 @@ footer a { color: var(--ink-soft); }
 </style>
 </head>
 <body>
-
+<div class="topbar" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</div>
 <header>
   <a class="mark" href="./">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5">
@@ -153,7 +159,14 @@ footer a { color: var(--ink-soft); }
     </svg>
     <b>Hijrah to Saudi</b>
   </a>
-  <span class="ar" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</span>
+  <nav>
+    <a class="on" href="./">Start</a>
+    <a href="../guides.html">Guides</a>
+    <a href="../tools.html">Tools</a>
+    <a href="../events.html">Events</a>
+    <a href="../pricing.html">Pricing</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
 </header>
 
 <main><div class="screen" id="screen"></div></main>
