@@ -52,7 +52,13 @@ h1, h2, h3, .brand a, .btn, .price-big {
 header.site {
   background: var(--sand);
   color: var(--blue-dark);
-  padding: 0.7rem 1rem 0.4rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 0.4rem 1.2rem; flex-wrap: wrap;
+  padding: 0.8rem 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='7'%3E%3Cpath d='M0 7 L8 1 L16 7' fill='none' stroke='%23c9a227' stroke-opacity='0.4'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom 2px center;
+  padding-bottom: 14px;
 }
 
 .brand { display: flex; align-items: center; gap: 0.55rem; flex-wrap: wrap; }
@@ -71,30 +77,21 @@ header.site {
 
 .brand .ar { font-size: 0.9rem; color: var(--ink-soft); }
 
-nav.main {
-  background: var(--sand);
-  padding: 0.2rem 0.6rem 0;
-  border-bottom: 1px solid var(--line);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='7'%3E%3Cpath d='M0 7 L8 1 L16 7' fill='none' stroke='%23c9a227' stroke-opacity='0.4'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: bottom 2px center;
-  padding-bottom: 8px;
-}
+nav.main { background: none; border: none; padding: 0; }
 
-nav.main ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 0.2rem; }
+nav.main ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 0.3rem; }
 
 nav.main a {
   display: block;
-  padding: 0.35rem 0.55rem 0.5rem;
+  padding: 0.2rem 0.45rem;
   color: var(--ink-soft);
   text-decoration: none;
-  font-size: 0.86rem;
-  border-bottom: 2px solid transparent;
+  font-size: 0.88rem;
 }
 
 nav.main a:hover { color: var(--blue-dark); }
 
-nav.main a[aria-current="page"] { color: var(--blue-dark); font-weight: 700; border-bottom-color: var(--teal); }
+nav.main a[aria-current="page"] { color: var(--teal); font-weight: 700; }
 
 
 /* ---------- hero ---------- */
@@ -389,7 +386,7 @@ footer.site .ar { color: #8fa5c4; margin-top: 0.8rem; }
   h1 { font-size: 2rem; }
   .hero { min-height: 30rem; }
   .hero h1 { font-size: 2.7rem; }
-  header.site, nav.main { padding-left: max(1rem, calc((100% - 62rem) / 2)); padding-right: max(1rem, calc((100% - 62rem) / 2)); }
+  header.site { padding-left: max(1rem, calc((100% - 62rem) / 2)); padding-right: max(1rem, calc((100% - 62rem) / 2)); }
   .topbar { padding-right: max(1rem, calc((100% - 62rem) / 2)); }
   nav.main a { font-size: 0.92rem; }
   .cardrow.c3 { grid-template-columns: 1fr 1fr 1fr; }
