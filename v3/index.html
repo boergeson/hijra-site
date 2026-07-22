@@ -3,338 +3,278 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hijrah to Saudi – your move to the Hijaz starts here | Hijrah to Saudi</title>
-<meta name="description" content="Tap through and find your route to living in Jeddah, Makkah or Madinah: work, study, business, property or marriage. Real 2026 prices, straight answers, help on the ground.">
+<title>Hijrah to Saudi — what do you want? | Hijrah to Saudi</title>
+<meta name="description" content="Moving to Saudi Arabia, done properly. Answer two questions and get your route: work, study, business, property or marriage. Real 2026 prices. Team on the ground in the Hijaz.">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 
 :root {
-  --blue: #16407c;
-  --blue-dark: #0e2c57;
-  --yellow: #f7c331;
-  --sand: #faf6ec;
-  --cream: #fffdf7;
-  --ink: #22262b;
-  --ink-soft: #4c5560;
-  --green-wa: #1fa855;
-  --bubble-me: #dcf3d0;
+  --bg: #f7f5f0;
+  --ink: #0e2c57;
+  --ink-soft: #5a6b84;
+  --gold: #c9a227;
+  --line: #e3ded2;
+  --wa: #1fa855;
 }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box; margin: 0; }
+
+html, body { height: 100%; }
 
 body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, system-ui, sans-serif;
-  background: var(--sand);
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
   color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-  background: var(--blue);
-  color: #fff;
-  padding: 0.8rem 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.1rem 1.4rem;
+}
+
+.mark { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; color: var(--ink); }
+
+.mark svg { width: 1.5rem; height: 1.5rem; }
+
+.mark b { font-weight: 900; letter-spacing: -0.02em; }
+
+header .ar { font-size: 0.85rem; color: var(--ink-soft); }
+
+main {
+  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;
-  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.2rem 1.4rem 3rem;
 }
 
-.brand { font-family: Poppins, sans-serif; font-weight: 800; font-size: 1.25rem; }
-.brand span { color: var(--yellow); }
+.screen { width: 100%; max-width: 40rem; animation: rise 0.35s ease; }
 
-header nav { display: flex; gap: 0.8rem; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
 
-header nav a { color: #dbe6f5; text-decoration: none; font-size: 0.88rem; }
-header nav a:hover { color: var(--yellow); }
-
-.hero {
-  position: relative;
-  background: url('../img/hero-home.jpg') center / cover no-repeat;
-  padding: 2.5rem 1rem 7rem;
-  text-align: center;
-  color: #fff;
+.step {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em;
+  color: var(--gold); text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
-.hero::after {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(14,44,87,0.35), rgba(14,44,87,0.8));
+h1 {
+  font-size: clamp(2.1rem, 7vw, 3.6rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+  margin-bottom: 0.7rem;
 }
 
-.hero > * { position: relative; z-index: 1; }
+.sub { color: var(--ink-soft); font-size: 1.02rem; max-width: 34rem; margin-bottom: 2rem; }
 
-.hero h1 {
-  font-family: Poppins, sans-serif;
-  font-size: 1.7rem;
-  margin: 0.2rem auto 0.4rem;
-  max-width: 22ch;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+.opts { display: flex; flex-direction: column; gap: 0.55rem; }
+
+.opts button {
+  font-family: inherit;
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  font-size: 1.05rem; font-weight: 500;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
 }
 
-.hero p { margin: 0 auto; max-width: 44ch; text-shadow: 0 1px 8px rgba(0,0,0,0.55); }
+.opts button::after { content: "→"; color: var(--gold); font-weight: 700; opacity: 0; transition: opacity 0.12s; }
 
-/* chat */
+.opts button:hover { border-color: var(--ink); background: #fff; }
+.opts button:hover::after { opacity: 1; }
 
-.chatwrap { max-width: 40rem; margin: -5.5rem auto 0; padding: 0 0.8rem; position: relative; z-index: 2; }
+.answer h1 { font-size: clamp(1.7rem, 5.5vw, 2.7rem); }
 
-.chat {
-  background: var(--cream);
-  border-radius: 18px;
-  box-shadow: 0 10px 40px rgba(14,44,87,0.25);
-  overflow: hidden;
+.answer p { color: var(--ink-soft); margin: 0.7rem 0; max-width: 36rem; }
+
+.answer p b { color: var(--ink); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.6rem; }
+
+.actions a {
+  text-decoration: none;
+  font-weight: 700; font-size: 0.98rem;
+  border-radius: 10px;
+  padding: 0.8rem 1.4rem;
 }
 
-.chat .bar {
-  background: var(--blue-dark);
-  color: #fff;
-  padding: 0.6rem 1rem;
+.actions a.main { background: var(--ink); color: #fff; }
+.actions a.wa { background: var(--wa); color: #fff; }
+.actions a.side { border: 1px solid var(--line); color: var(--ink); }
+.actions a:hover { opacity: 0.88; }
+
+.back {
+  display: inline-block;
+  margin-top: 2rem;
   font-size: 0.9rem;
-  display: flex; align-items: center; gap: 0.6rem;
-}
-
-.chat .bar .dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: #3ddc68; }
-
-.stream {
-  padding: 1rem;
-  min-height: 16rem;
-  max-height: 60vh;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-}
-
-.msg {
-  max-width: 85%;
-  padding: 0.6rem 0.85rem;
-  border-radius: 14px;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  animation: pop 0.25s ease;
-}
-
-@keyframes pop { from { opacity: 0; transform: translateY(6px); } }
-
-.msg.bot { background: #eef3fa; border-bottom-left-radius: 4px; align-self: flex-start; }
-
-.msg.me { background: var(--bubble-me); border-bottom-right-radius: 4px; align-self: flex-end; }
-
-.msg a { color: var(--blue); font-weight: 600; }
-
-.msg .btns { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.55rem; }
-
-.msg .btns a {
-  display: inline-block; text-decoration: none;
-  padding: 0.45rem 0.9rem; border-radius: 999px;
-  font-size: 0.88rem; font-weight: 700; font-family: Poppins, sans-serif;
-}
-
-.msg .btns a.g { background: var(--yellow); color: var(--blue-dark); }
-.msg .btns a.w { background: var(--green-wa); color: #fff; }
-
-.typing { align-self: flex-start; background: #eef3fa; border-radius: 14px; padding: 0.6rem 0.9rem; }
-.typing i {
-  display: inline-block; width: 0.4rem; height: 0.4rem; border-radius: 50%;
-  background: #9db0c8; margin: 0 0.08rem; animation: blink 1s infinite;
-}
-.typing i:nth-child(2) { animation-delay: 0.2s; }
-.typing i:nth-child(3) { animation-delay: 0.4s; }
-@keyframes blink { 0%, 60%, 100% { opacity: 0.3; } 30% { opacity: 1; } }
-
-.replies {
-  display: flex; flex-wrap: wrap; gap: 0.45rem;
-  padding: 0.8rem 1rem 1rem;
-  border-top: 1px solid #eee4cd;
-  background: var(--cream);
-}
-
-.replies button {
-  font-family: Poppins, sans-serif;
-  font-size: 0.9rem; font-weight: 600;
-  background: #fff; color: var(--blue-dark);
-  border: 2px solid var(--blue);
-  border-radius: 999px;
-  padding: 0.45rem 0.95rem;
+  color: var(--ink-soft);
+  text-decoration: none;
   cursor: pointer;
 }
 
-.replies button:hover { background: var(--blue); color: #fff; }
+.back:hover { color: var(--ink); }
 
-/* below chat */
-
-.cards {
-  max-width: 40rem; margin: 1.6rem auto; padding: 0 0.8rem;
-  display: grid; gap: 0.8rem;
-}
-
-@media (min-width: 640px) { .cards { grid-template-columns: 1fr 1fr 1fr; } }
-
-.cards a {
-  background: var(--cream); border-radius: 16px;
-  box-shadow: 0 3px 16px rgba(14,44,87,0.10);
-  padding: 1rem; text-decoration: none; color: var(--ink);
+footer {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem;
+  align-items: center; justify-content: center;
+  padding: 1.1rem 1.4rem 1.5rem;
+  font-size: 0.8rem; color: var(--ink-soft);
+  border-top: 1px solid var(--line);
   text-align: center;
 }
 
-.cards a .e { display: block; margin: 0 auto 0.4rem; width: 2.2rem; height: 2.2rem; }
-.cards a .e svg { width: 100%; height: 100%; stroke: var(--blue); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.cards a .e .gold { stroke: var(--yellow); }
-.cards a strong { font-family: Poppins, sans-serif; color: var(--blue-dark); display: block; }
-.cards a span { font-size: 0.83rem; color: var(--ink-soft); }
+footer a { color: var(--ink-soft); }
 
-footer {
-  background: var(--blue-dark); color: #b9c8dd;
-  text-align: center; font-size: 0.82rem;
-  padding: 1.2rem 1rem 1.6rem; margin-top: 2rem;
+@media (min-width: 700px) {
+  .opts.grid { display: grid; grid-template-columns: 1fr 1fr; }
 }
-
-footer a { color: #e8d89a; }
-
-footer .ar { margin-top: 0.5rem; color: #8fa5c4; }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="brand">Hijrah to <span>Saudi</span></div>
-  <nav>
-    <a href="../visas.html">Guides</a>
-    <a href="../tools.html">Tools</a>
-    <a href="../pricing.html">Pricing</a>
-    <a href="../contact.html">Contact</a>
-  </nav>
+  <a class="mark" href="./">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5">
+      <path d="M12 2l2.6 4.8L20 4l-1.2 5.4L24 12l-5.2 2.6L20 20l-5.4-1.2L12 24l-2.6-5.2L4 20l1.2-5.4L0 12l5.2-2.6L4 4l5.4 1.2z" transform="scale(0.92) translate(1,1)"/>
+    </svg>
+    <b>Hijrah to Saudi</b>
+  </a>
+  <span class="ar" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</span>
 </header>
 
-<div class="hero">
-  <h1>Your move to the Hijaz starts with one tap</h1>
-  <p>Jeddah, Makkah, Madinah. Real routes, real prices, help on the ground. Tell us what you're thinking below.</p>
-</div>
-
-<div class="chatwrap">
-  <div class="chat">
-    <div class="bar"><span class="dot"></span> Hijrah to Saudi · answers in seconds</div>
-    <div class="stream" id="stream"></div>
-    <div class="replies" id="replies"></div>
-  </div>
-</div>
-
-<div class="cards">
-  <a href="../tools.html"><span class="e"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8" class="gold"/><line x1="8" y1="12" x2="12" y2="12"/><line x1="8" y1="16" x2="14" y2="16"/></svg></span><strong>Free tools</strong><span>Cost calculator, readiness score, school finder</span></a>
-  <a href="../pricing.html"><span class="e"><svg viewBox="0 0 24 24"><path d="M4 4h7l9 9-7 7-9-9z"/><circle cx="8.5" cy="8.5" r="1.4" class="gold"/></svg></span><strong>Clear prices</strong><span>From a $49 call to full relocation</span></a>
-  <a href="https://wa.me/966550606619"><span class="e"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5z"/><line x1="9" y1="11" x2="15" y2="11" class="gold"/><line x1="9" y1="14" x2="13" y2="14"/></svg></span><strong>Real people</strong><span>Our team in Makkah &amp; Jeddah, one message away</span></a>
-</div>
+<main><div class="screen" id="screen"></div></main>
 
 <footer>
-  <div><strong style="color:#fff">Hijrah to Saudi</strong> · Makkah &amp; Jeddah · <a href="https://wa.me/966550606619">WhatsApp +966 55 060 6619</a> · <a href="mailto:isa@mvpr.org">isa@mvpr.org</a></div>
-  <div>A private Saudi-based relocation company. Not a government agency. Rules checked July 2026 — always confirm on official portals.</div>
-  <div class="ar" lang="ar" dir="rtl">اللهم يسِّر ولا تعسِّر</div>
+  <span>Makkah &amp; Jeddah</span>
+  <a href="https://wa.me/966550606619">+966 55 060 6619</a>
+  <a href="../visas.html">Guides</a>
+  <a href="../tools.html">Tools</a>
+  <a href="../pricing.html">Pricing</a>
+  <span>Private company · not a government agency · rules checked July 2026</span>
 </footer>
 
 <script>
 var WA = 'https://wa.me/966550606619?text=';
 
 var TREE = {
-  start: {
-    say: ['Salam alaikum! ', 'I can tell you, in about a minute, how you can realistically move to Saudi Arabia. How are you thinking of coming?'],
-    opts: [['Through work', 'work'], ['Through study', 'study'], ['Through business', 'biz'], ['Property / investment', 'invest'], ['Marriage', 'marriage'], ['Just visiting first', 'visit'], ['I honestly don\'t know', 'unsure']]
-  },
-  work: { say: ['Work is the classic route — the employer sponsors your iqama and pays the visa fees by law.', 'Which sounds like you?'],
-    opts: [['In-demand profession', 'work-skilled'], ['Office / admin / sales', 'work-office'], ['I already have an offer', 'work-offer'], ['⬅ Back', 'start']] },
-  'work-skilled': { say: ['Then you\'re exactly who Saudi is hiring. ', 'Healthcare, engineering, tech and teaching are open and pay tax-free — licensed teachers make SAR 12–25k/month plus housing. A skilled job title also lets you bring your family (SAR 400/month per dependent).', 'Read the jobs guide, or just tell us your field and we\'ll tell you your chances.'],
-    btns: [['Jobs guide', '../jobs.html', 'g'], ['Tell us your field', 'Salam alaikum, my profession is: ', 'w']], opts: [['Start again', 'start']] },
-  'work-office': { say: ['Straight answer, because you deserve one: office, admin and sales roles are being reserved for Saudis. That door is closing. ', 'But you have real options: retrain toward a shortage field, open a licensed business, or the investment routes. Many brothers pivoted and are here now.', 'Want to talk it through?'],
-    btns: [['The Saudization reality', '../jobs.html', 'g'], ['Talk to us', 'Salam alaikum, I work in an office role and want to discuss my realistic options. ', 'w']], opts: [['The business route', 'biz'], ['Start again', 'start']] },
-  'work-offer': { say: ['Congratulations!  Now protect yourself — three checks before you sign:', '1⃣ The employer pays visa and iqama fees, by law.\n2⃣ Your contract must be registered in Qiwa.\n3⃣ Your exact job title decides if your family can join you.', 'We run all three checks for a flat $149.'],
-    btns: [['The checks explained', '../jobs.html', 'g'], ['Check my offer', 'Salam alaikum, I have a Saudi job offer and want it checked. ', 'w']], opts: [['Start again', 'start']] },
-  study: { say: ['The student route is the best-kept secret.  Full scholarships: free tuition, iqama, housing, healthcare, yearly flights home, and a monthly stipend.', 'One big rule decides everything — how old are you?'],
-    opts: [['I\'m 17–25', 'study-young'], ['I\'m 26+', 'study-older'], ['⬅ Back', 'start']] },
-  'study-young': { say: ['You\'re in the golden window, alhamdulillah. ', 'Bachelor\'s scholarships accept ages 17–25, and zero Arabic is fine — the universities run Arabic institutes that take you from nothing, with the full scholarship from day one. Madinah, Makkah, Jeddah, Riyadh.', 'Applications run through one government portal each spring. We track the dates and handle applications for $199.'],
-    btns: [['Student route guide', '../study.html', 'g'], ['Help me apply', 'Salam alaikum, I am 17-25 and want to apply for a scholarship. ', 'w']], opts: [['Start again', 'start']] },
-  'study-older': { say: ['Honest answer: bachelor\'s scholarships stop at 25. That window is closed. ', 'Still open for you: master\'s (under 30), PhD (under 35), self-funded study, or residency through work or business — and the study circles of the Haramain are open to every resident, free.'],
-    btns: [['All options honestly', '../study.html', 'g'], ['My situation', 'Salam alaikum, I am over 25 and interested in studying in Saudi. ', 'w']], opts: [['The work route', 'work'], ['Start again', 'start']] },
-  biz: { say: ['Business, mashallah. There\'s a right way and a dangerous way — I\'ll show you the right one.', 'What are you thinking?'],
-    opts: [['Open my own', 'biz-own'], ['Partner with a Saudi', 'biz-partner'], ['I have serious capital', 'biz-invest'], ['⬅ Back', 'start']] },
-  'biz-own': { say: ['You can own 100% of a Saudi company yourself. Legally. ', 'A MISA license covers most sectors, your company sponsors your own iqama and your family. License fees are currently waived; realistic first-year setup runs SAR 15–25k plus your business capital. Six to twelve weeks.', 'We connect you with licensed formation agents and people in your industry here.'],
-    btns: [['Business guide', '../business.html', 'g'], ['My business idea', 'Salam alaikum, I want to open a business in Saudi. My idea: ', 'w']], opts: [['Start again', 'start']] },
-  'biz-partner': { say: ['Careful here, akhi. ', 'A real, registered joint venture with your name on the papers: halal and fine. The famous "he registers it under his name, you run it and pay him" arrangement is tasattur — a crime. Up to 5 years prison, SAR 5M fine, deportation. People will tell you everyone does it. Enforcement is real.', 'We only connect people to the registered, legal kind.'],
-    btns: [['Read this first', '../business.html', 'g'], ['Legal partnership', 'Salam alaikum, I want a legal registered partnership. My field: ', 'w']], opts: [['Or own it 100% myself', 'biz-own'], ['Start again', 'start']] },
-  'biz-invest': { say: ['With capital, Saudi rolls out the carpet. ', '• SAR 7M invested + 10 jobs → investor Premium Residency (SAR 4,000 fee)\n• SAR 800,000 one-time → permanent residency, family included, even parents\n• SAR 4M property → residency that lasts as long as you own it', 'At this level you talk to people, not websites.'],
-    btns: [['Compare the routes', '../visas.html#premium', 'g'], ['Speak to us', 'Salam alaikum, I have capital to invest and want to discuss residency. ', 'w']], opts: [['Start again', 'start']] },
-  invest: { say: ['Property in Saudi opened up in January 2026 — the biggest change in decades. ', 'What interests you?'],
-    opts: [['A home in Jeddah', 'invest-home'], ['Property in Makkah or Madinah', 'invest-haram'], ['Residency through wealth', 'biz-invest'], ['⬅ Back', 'start']] },
-  'invest-home': { say: ['Since January 2026, non-Saudis can buy in designated zones, led by Riyadh and Jeddah — resident or from abroad. ', 'Residents can also own one home outside the zones. And SAR 4M+ of property carries Premium Residency with it: the home and the legal status in one purchase.', 'Everything runs through the official REGA platform, and we verify zones and developers before any money moves.'],
-    btns: [['Housing guide', '../housing.html', 'g'], ['My budget & city', 'Salam alaikum, I am interested in buying property. My budget: ', 'w']], opts: [['Start again', 'start']] },
-  'invest-haram': { say: ['This is the historic one. ', 'Ownership in Makkah and Madinah is now open to Muslims — only Muslims — in approved zones, even living abroad. A Muslim in Birmingham can hold registered title to an apartment in Makkah.', 'The zones are mostly the big Haram-area developments, prices are serious, and scammers are already selling "pre-launch" units. Verify everything against the REGA map — or let us do it.'],
-    btns: [['Details & warnings', '../housing.html', 'g'], ['Verify a project', 'Salam alaikum, I am interested in property near the Haramain. ', 'w']], opts: [['Start again', 'start']] },
-  marriage: { say: ['We run a quiet matrimonial service inside our community. ', 'Written profiles, wali involved from the first message for sisters, introductions between families who can be vouched for — people serious about the deen and serious about living in a Muslim land.', 'Everything stays private.'],
-    btns: [['How it works', '../marriage.html', 'g'], ['Request the profile form', 'Salam alaikum, I am interested in the marriage service. I am a (brother/sister): ', 'w']], opts: [['Start again', 'start']] },
-  visit: { say: ['Smart. See it with your own eyes first. ', 'The tourist eVisa: ~SAR 535, valid a year, 90 days per stay, Umrah allowed outside Hajj season. Walk the neighbourhoods, visit schools, price the apartments — then decide properly.', 'We plan scouting trips for $49: itinerary, areas to see, people to meet.'],
-    btns: [['Tourist visa facts', '../visas.html#tourist', 'g'], ['Plan my trip', 'Salam alaikum, I want to plan a scouting trip to the Hijaz. ', 'w']], opts: [['Start again', 'start']] },
-  unsure: { say: ['That\'s the most honest answer there is. ', 'For an ordinary Muslim family there are exactly four realistic doors: a job, a scholarship, a real business, or money. Everything else is a visit.', 'Tell me a little and I\'ll point you to a door — or take the 2-minute check which asks age, family, work and budget.'],
-    btns: [['2-minute check', '../tools.html#wizard', 'g'], ['My situation', 'Salam alaikum, I am not sure which route fits me. My situation: ', 'w']], opts: [['Work', 'work'], ['Study', 'study'], ['Business', 'biz'], ['Start again', 'start']] }
+  start: { step: 'Question 1', h: 'What do you want?', sub: 'Moving to Saudi Arabia, done properly. Two questions, then your route with real prices.', grid: true, opts: [
+    ['Work here', 'work'], ['Study here', 'study'], ['Build a business', 'biz'], ['Buy property', 'invest'], ['Get married', 'marriage'], ['Visit first', 'visit'], ['Guide me', 'unsure']
+  ]},
+  work: { step: 'Question 2', h: 'Who are you?', sub: 'The work route lives or dies on your profession.', opts: [
+    ['Doctor, nurse, engineer, teacher, tech', 'work-skilled'], ['Office, admin, sales', 'work-office'], ['I already hold a Saudi job offer', 'work-offer'], ['← Back', 'start']
+  ]},
+  'work-skilled': { a: true, h: 'Saudi is hiring you.', p: [
+    'These are the shortage fields. Tax-free salaries — licensed teachers make <b>SAR 12–25k a month</b> plus housing. The employer pays your visa and iqama by law, and a skilled title lets your family join you.',
+    'Next step: your CV on the right desks. We know which desks.'
+  ], btns: [['Talk to us', 'Salam alaikum, I work in an in-demand field and want to move. My profession: ', 'wa'], ['Jobs guide', '../jobs.html', 'side']] },
+  'work-office': { a: true, h: 'That door is closing. Hear it now.', p: [
+    'Office, admin and sales roles are being reserved for Saudis. A year of applications will likely waste a year.',
+    'Real options: retrain toward a shortage field, open a licensed business, or the investment routes. Brothers have pivoted and are here now.'
+  ], btns: [['My options', 'Salam alaikum, I work in an office role. What are my realistic options? ', 'wa'], ['The business route', '../business.html', 'side']] },
+  'work-offer': { a: true, h: 'Three checks before you sign.', p: [
+    '<b>One:</b> the employer pays visa and iqama fees — by law. <b>Two:</b> the contract must be registered in Qiwa. <b>Three:</b> your exact job title decides whether your family can come.',
+    'We run all three for a flat <b>$149</b>. Cheaper than one wrong signature.'
+  ], btns: [['Check my offer', 'Salam alaikum, I have a Saudi job offer and want it checked. ', 'wa'], ['The checks', '../jobs.html', 'side']] },
+  study: { step: 'Question 2', h: 'How old are you?', sub: 'One rule decides the whole student route.', opts: [
+    ['17–25', 'study-young'], ['26 or older', 'study-older'], ['← Back', 'start']
+  ]},
+  'study-young': { a: true, h: 'The golden window.', p: [
+    'Full scholarships: <b>free tuition, iqama, housing, healthcare, flights, monthly stipend</b>. Zero Arabic needed — the universities teach you from nothing, funded from day one. Madinah, Makkah, Jeddah.',
+    'One government portal, one application window each spring. We track it and handle applications for <b>$199</b>.'
+  ], btns: [['Help me apply', 'Salam alaikum, I am 17-25 and want a scholarship. ', 'wa'], ['Student guide', '../study.html', 'side']] },
+  'study-older': { a: true, h: 'That window closed at 25.', p: [
+    'Straight answer. Still open: master\'s under 30, PhD under 35, self-funded study, or residency through work or business — and the study circles of the Haramain are free for every resident.'
+  ], btns: [['My situation', 'Salam alaikum, I am over 25 and interested in studying in Saudi. ', 'wa'], ['All options', '../study.html', 'side']] },
+  biz: { step: 'Question 2', h: 'Which one is you?', sub: 'There is a right way and a prison way. We only do the right way.', opts: [
+    ['I want to own my business', 'biz-own'], ['I want a Saudi partner', 'biz-partner'], ['I have serious capital', 'biz-invest'], ['← Back', 'start']
+  ]},
+  'biz-own': { a: true, h: 'Own 100% of it. Legally.', p: [
+    'A MISA license gives full foreign ownership in most sectors. Your company sponsors your iqama and your family. License fees currently waived; realistic setup <b>SAR 15–25k</b> plus your capital. Six to twelve weeks.'
+  ], btns: [['My business idea', 'Salam alaikum, I want to open a business in Saudi. My idea: ', 'wa'], ['Business guide', '../business.html', 'side']] },
+  'biz-partner': { a: true, h: 'Careful. One way is halal. One is five years in prison.', p: [
+    'A registered joint venture with your name on the papers: fine. The famous "his name, your business, monthly fee" arrangement is <b>tasattur</b> — up to 5 years, SAR 5M fine, deportation. Enforcement is real.',
+    'We connect people to the registered kind only.'
+  ], btns: [['Legal partnership', 'Salam alaikum, I want a legal registered partnership. My field: ', 'wa'], ['Read first', '../business.html', 'side']] },
+  'biz-invest': { a: true, h: 'Capital opens every door.', p: [
+    '<b>SAR 800,000</b> once: permanent residency, family included, parents included. <b>SAR 4M</b> in property: residency that lasts while you own it — since 2026 even in approved zones of Makkah and Madinah. <b>SAR 7M</b> invested + 10 jobs: investor residency, SAR 4,000 fee.',
+    'At this level you talk to people, not websites.'
+  ], btns: [['Speak to us', 'Salam alaikum, I have capital and want to discuss residency. ', 'wa'], ['Compare routes', '../visas.html#premium', 'side']] },
+  invest: { step: 'Question 2', h: 'Where?', sub: 'Foreign ownership opened in January 2026. The rules differ by city.', opts: [
+    ['Jeddah or Riyadh', 'invest-home'], ['Makkah or Madinah', 'invest-haram'], ['← Back', 'start']
+  ]},
+  'invest-home': { a: true, h: 'Open since January.', p: [
+    'Non-Saudis can buy in designated zones, resident or from abroad. Residents may also own one home outside the zones. <b>SAR 4M+</b> of property carries Premium Residency with it: home and legal status in one purchase.',
+    'Everything runs through the official REGA platform. We verify zones and developers before money moves.'
+  ], btns: [['My budget', 'Salam alaikum, I want to buy property. My budget and city: ', 'wa'], ['Housing guide', '../housing.html', 'side']] },
+  'invest-haram': { a: true, h: 'The holy cities. Muslims only. Historic.', p: [
+    'For the first time, Muslims — resident or abroad — can hold registered title in approved zones of Makkah and Madinah. The zones are the big Haram-area developments. Prices are serious. So are the scammers selling "pre-launch" units.',
+    'Verify against the REGA map, or let us do it.'
+  ], btns: [['Verify a project', 'Salam alaikum, I am interested in property near the Haramain. ', 'wa'], ['Details', '../housing.html', 'side']] },
+  marriage: { a: true, h: 'Quiet, vetted, wali involved.', p: [
+    'A matrimonial service inside our community: written profiles, families who can be vouched for, wali involved from the first message for sisters. For people serious about the deen and serious about living in a Muslim land.',
+    'Private throughout.'
+  ], btns: [['Request the form', 'Salam alaikum, I am interested in the marriage service. I am a (brother/sister): ', 'wa'], ['How it works', '../marriage.html', 'side']] },
+  visit: { a: true, h: 'Smart. Scout first.', p: [
+    'Tourist eVisa: <b>~SAR 535</b>, valid a year, 90 days per stay, Umrah outside Hajj season. Walk the neighbourhoods, price the apartments, visit the schools. Then decide.',
+    'We plan scouting trips for <b>$49</b>: areas, appointments, people worth meeting.'
+  ], btns: [['Plan my trip', 'Salam alaikum, I want to plan a scouting trip to the Hijaz. ', 'wa'], ['Visa facts', '../visas.html#tourist', 'side']] },
+  unsure: { a: true, h: 'Four doors. That is the whole truth.', p: [
+    'A job. A scholarship. A real business. Or money. Everything else is a visit — including the tourist visa.',
+    'Tell us who you are and we will point at your door. First message costs nothing.'
+  ], btns: [['My situation', 'Salam alaikum, I am not sure which route fits me. My situation: ', 'wa'], ['The 2-minute check', '../tools.html#wizard', 'side']] }
 };
 
-var stream = document.getElementById('stream');
-var repliesEl = document.getElementById('replies');
+var path = ['start'];
+var el = document.getElementById('screen');
 
-function bubble(cls, html) {
-  var d = document.createElement('div');
-  d.className = 'msg ' + cls;
-  d.innerHTML = html;
-  stream.appendChild(d);
-  stream.scrollTop = stream.scrollHeight;
-  return d;
-}
-
-function typing() {
-  var t = document.createElement('div');
-  t.className = 'typing';
-  t.innerHTML = '<i></i><i></i><i></i>';
-  stream.appendChild(t);
-  stream.scrollTop = stream.scrollHeight;
-  return t;
-}
-
-function goto_(key, echo) {
-  var node = TREE[key];
-  repliesEl.innerHTML = '';
-  if (echo) bubble('me', echo);
-  var i = 0;
-  function next() {
-    if (i < node.say.length) {
-      var t = typing();
-      setTimeout(function () {
-        t.remove();
-        bubble('bot', node.say[i].replace(/\n/g, '<br>'));
-        i++;
-        next();
-      }, i === 0 ? 350 : 550);
-    } else {
-      if (node.btns) {
-        var html = '<div class="btns">' + node.btns.map(function (b) {
-          var href = b[2] === 'w' ? WA + encodeURIComponent(b[1]) : b[1];
-          return '<a class="' + b[2] + '" href="' + href + '">' + b[0] + '</a>';
-        }).join('') + '</div>';
-        var t = typing();
-        setTimeout(function () { t.remove(); bubble('bot', html); showOpts(); }, 450);
-      } else {
-        showOpts();
-      }
-    }
+function render() {
+  var node = TREE[path[path.length - 1]];
+  var h = '';
+  if (node.opts) {
+    h += '<div class="step">' + node.step + '</div>';
+    h += '<h1>' + node.h + '</h1>';
+    if (node.sub) h += '<p class="sub">' + node.sub + '</p>';
+    h += '<div class="opts' + (node.grid ? ' grid' : '') + '">' + node.opts.map(function (o, i) {
+      return '<button data-i="' + i + '">' + o[0] + '</button>';
+    }).join('') + '</div>';
+  } else {
+    h += '<div class="answer"><div class="step">Your route</div>';
+    h += '<h1>' + node.h + '</h1>';
+    h += node.p.map(function (p) { return '<p>' + p + '</p>'; }).join('');
+    h += '<div class="actions">' + node.btns.map(function (b) {
+      var cls = b[2] === 'wa' ? 'wa' : b[2];
+      var href = b[2] === 'wa' ? WA + encodeURIComponent(b[1]) : b[1];
+      return '<a class="' + cls + '" href="' + href + '">' + b[0] + '</a>';
+    }).join('') + '</div>';
+    h += '<a class="back" id="restart">← Start again</a></div>';
   }
-  function showOpts() {
-    if (!node.opts) return;
-    node.opts.forEach(function (o) {
-      var b = document.createElement('button');
-      b.textContent = o[0];
-      b.onclick = function () { goto_(o[1], o[0]); };
-      repliesEl.appendChild(b);
+  el.innerHTML = h;
+  el.style.animation = 'none';
+  void el.offsetWidth;
+  el.style.animation = '';
+  if (node.opts) {
+    el.querySelectorAll('.opts button').forEach(function (b) {
+      b.onclick = function () {
+        var o = node.opts[parseInt(b.dataset.i, 10)];
+        if (o[1] === 'start') { path = ['start']; } else { path.push(o[1]); }
+        render();
+      };
     });
+  } else {
+    document.getElementById('restart').onclick = function () { path = ['start']; render(); };
   }
-  next();
 }
-
-goto_('start', null);
+render();
 </script>
 </body>
 </html>
