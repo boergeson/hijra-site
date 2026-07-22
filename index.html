@@ -3,9 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hijrah to Saudi Arabia – visas, work, study and family life | Hijrah to Saudi</title>
-<meta name="description" content="Straight answers about moving to Saudi Arabia for the sake of Allah: every legal visa route with real prices, jobs, university scholarships, housing and schools. From brothers on the ground in Makkah and Jeddah.">
-<link rel="stylesheet" href="css/style.css">
+<title>Hijrah to Saudi Arabia – find your route to Jeddah, Makkah or Madinah | Hijrah to Saudi</title>
+<meta name="description" content="Make hijrah to Saudi Arabia the proper way. Answer two questions and get your realistic route with real 2026 prices: work, study, business, property or marriage. Team on the ground in the Hijaz.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -13,243 +12,315 @@
   "name": "Hijrah to Saudi",
   "email": "isa@mvpr.org",
   "areaServed": "Saudi Arabia",
-  "description": "Information and hands-on help for Muslims making hijrah to Saudi Arabia: visas, residency, university scholarships, jobs, housing, marriage and schools."
+  "description": "Guides, tools and hands-on help for Muslims making hijrah to Saudi Arabia: visas, residency, university scholarships, jobs, housing, marriage and schools."
 }
 </script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+:root {
+  --bg: #f8f6f1;
+  --ink: #0e2c57;
+  --ink-soft: #5a6b84;
+  --gold: #c9a227;
+  --teal: #2c6e63;
+  --line: #e6e1d5;
+  --wa: #1fa855;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 0.8rem; flex-wrap: wrap;
+  padding: 1rem 1.4rem 0.8rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='7'%3E%3Cpath d='M0 7 L8 1 L16 7' fill='none' stroke='%23c9a227' stroke-opacity='0.4'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom 0 center;
+  padding-bottom: 14px;
+}
+
+.mark { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--ink); }
+
+.mark b { font-weight: 900; letter-spacing: -0.02em; font-size: 1.05rem; }
+
+header nav { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+
+header nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.88rem; }
+header nav a:hover { color: var(--teal); }
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem 1.4rem 2.4rem;
+}
+
+.screen { width: 100%; max-width: 40rem; animation: rise 0.35s ease; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+
+.step {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em;
+  color: var(--gold); text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 7vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 0.7rem;
+}
+
+.sub { color: var(--ink-soft); font-size: 1.02rem; max-width: 34rem; margin-bottom: 1.5rem; }
+
+.qline { font-weight: 800; font-size: 1.2rem; margin-bottom: 0.9rem; }
+
+.opts { display: flex; flex-direction: column; gap: 0.55rem; }
+
+.opts button {
+  font-family: inherit;
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  font-size: 1.05rem; font-weight: 500;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.opts button::after { content: "→"; color: var(--teal); font-weight: 700; opacity: 0; transition: opacity 0.12s; }
+
+.opts button:hover { border-color: var(--teal); background: #fff; }
+.opts button:hover::after { opacity: 1; }
+
+.answer h1 { font-size: clamp(1.7rem, 5.5vw, 2.6rem); }
+
+.answer p { color: var(--ink-soft); margin: 0.7rem 0; max-width: 36rem; }
+
+.answer p b { color: var(--ink); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.5rem; }
+
+.actions a {
+  text-decoration: none;
+  font-weight: 700; font-size: 0.98rem;
+  border-radius: 10px;
+  padding: 0.8rem 1.4rem;
+}
+
+.actions a.wa { background: var(--wa); color: #fff; }
+.actions a.side { border: 1px solid var(--line); color: var(--ink); }
+.actions a:hover { opacity: 0.88; }
+
+.back {
+  display: inline-block;
+  margin-top: 1.8rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back:hover { color: var(--teal); }
+
+.explore {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem;
+  justify-content: center;
+  padding: 0 1.4rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+.explore a { color: var(--teal); text-decoration: none; }
+.explore a:hover { text-decoration: underline; }
+
+footer {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem;
+  align-items: center; justify-content: center;
+  padding: 1rem 1.4rem 1.4rem;
+  font-size: 0.8rem; color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+footer a { color: var(--ink-soft); }
+
+@media (min-width: 700px) {
+  .opts.grid { display: grid; grid-template-columns: 1fr 1fr; }
+}
+</style>
 </head>
 <body>
-<div class="topbar" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</div>
-<header class="site">
-  <div class="brand">
-    <svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5" aria-hidden="true"><rect x="5.2" y="5.2" width="13.6" height="13.6"/><rect x="5.2" y="5.2" width="13.6" height="13.6" transform="rotate(45 12 12)"/></svg>
-    <a href="index.html">Hijrah to <span>Saudi</span></a>
-    <span class="ar" lang="ar" dir="rtl">الهجرة إلى بلاد الحرمين</span>
-  </div>
-</header>
-<nav class="main" aria-label="Main">
-  <ul>
-    <li><a href="v3/">Start</a></li>
-    <li><a href="index.html" aria-current="page">Home</a></li>
-    <li><a href="tools.html">Tools</a></li>
-    <li><a href="visas.html">Visas &amp; residency</a></li>
-    <li><a href="study.html">Study</a></li>
-    <li><a href="jobs.html">Jobs</a></li>
-    <li><a href="housing.html">Housing</a></li>
-    <li><a href="business.html">Business</a></li>
-    <li><a href="marriage.html">Marriage</a></li>
-    <li><a href="schools.html">Schools</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="community.html">Community</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
 
-<div class="hero" style="background-image: url('img/hero-home.jpg');">
-  <div class="inner">
-    <p class="kicker" style="color: var(--yellow);">Assalamu alaikum wa rahmatullah</p>
-    <h1>Live near the Haramain.<br>Legally. Properly. This year.</h1>
-    <p>The relocation company for hijrah to the Hijaz: Jeddah, Makkah and Madinah. Free guides and tools tell you in minutes whether you can move and what it costs. When you are ready, our team on the ground does the paperwork with you.</p>
-    <div class="btnrow">
-      <a class="btn gold" href="tools.html#wizard">Can I move? Take the 2-minute check</a>
-      <a class="btn ghost" href="pricing.html">Book a consultation – $49</a>
-    </div>
-  </div>
-  <span class="credit">Photo: Slywire, CC BY-SA 4.0</span>
+<header>
+  <a class="mark" href="./">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5" aria-hidden="true">
+      <rect x="5.2" y="5.2" width="13.6" height="13.6"/>
+      <rect x="5.2" y="5.2" width="13.6" height="13.6" transform="rotate(45 12 12)"/>
+    </svg>
+    <b>Hijrah to Saudi</b>
+  </a>
+  <nav>
+    <a href="guides.html">Guides</a>
+    <a href="tools.html">Tools</a>
+    <a href="events.html">Events</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main><div class="screen" id="screen"></div></main>
+
+<div class="explore">
+  <a href="visas.html">Visas &amp; residency</a>
+  <a href="study.html">Study</a>
+  <a href="jobs.html">Jobs</a>
+  <a href="housing.html">Housing</a>
+  <a href="business.html">Business</a>
+  <a href="marriage.html">Marriage</a>
+  <a href="schools.html">Schools</a>
+  <a href="community.html">Community</a>
 </div>
 
-<main>
-  <div class="tool" id="start" style="margin-top:1.4rem;">
-    <h2 style="margin-top:0.2rem;">I want to move to Saudi through…</h2>
-    <p id="t-q" class="q" style="font-size:1.05rem;"></p>
-    <div class="optrow" id="t-opts"></div>
-    <div class="result" id="t-answer"></div>
-    <p style="margin-top:0.9rem;"><a href="#" id="t-back" style="display:none; font-size:0.9rem;">← Back</a></p>
-  </div>
-
-  <div class="facts">
-    <strong>The honest picture first.</strong> Saudi Arabia does not hand out residency easily. For an ordinary Muslim family there are four realistic doors: a job offer, a university scholarship, a real licensed business, or money (Premium Residency). Everything else, including the tourist visa, is a visit. The good news is that every one of these doors is more open in 2026 than it has ever been, and we can tell you exactly what each one costs.
-  </div>
-
-  <h2>Start where you are</h2>
-  <div class="stages">
-    <a href="visas.html"><strong>I'm just researching</strong><span>The four legal doors, real 2026 costs, and the shortcuts to avoid</span></a>
-    <a href="tools.html"><strong>I'm checking if it's possible</strong><span>2-minute route check, cost calculator, readiness score</span></a>
-    <a href="tools.html#readiness"><strong>I'm preparing to move</strong><span>Score your readiness, get your to-do list, book the family plan</span></a>
-    <a href="jobs.html"><strong>I need work there</strong><span>What's open in 2026, real salaries, where to actually apply</span></a>
-    <a href="schools.html"><strong>I'm raising children</strong><span>Schools in Jeddah, Makkah and Madinah, and how placement works</span></a>
-    <a href="community.html"><strong>I've arrived / I'm close</strong><span>The groups, the people, and help settling in</span></a>
-  </div>
-
-  <h2>The four doors, at a glance</h2>
-  <div class="tablewrap">
-  <table>
-    <tr><th>Route</th><th>Up-front cost</th><th>Family?</th><th>Best for</th></tr>
-    <tr><td><a href="jobs.html">Job offer → work iqama</a></td><td class="price">Employer pays (by law)</td><td>Yes, skilled roles</td><td>Doctors, nurses, engineers, teachers, tech</td></tr>
-    <tr><td><a href="study.html">University scholarship</a></td><td class="price">Free, with stipend</td><td>Ask us, it varies</td><td>Anyone 17–25 who wants sacred knowledge or a degree</td></tr>
-    <tr><td><a href="business.html">Licensed business (MISA)</a></td><td class="price">SAR 15–25k+ first year</td><td>Yes</td><td>People with a working business or serious plan</td></tr>
-    <tr><td><a href="visas.html#premium">Premium Residency</a></td><td class="price">SAR 4,000 – 800,000</td><td>Yes, incl. parents</td><td>High earners, property buyers, investors</td></tr>
-  </table>
-  </div>
-
-  <h2>What we charge</h2>
-  <p>The guides on this site are free, and they will stay free. The paid part is us doing the work with you. Fixed prices, agreed before we start, no surprises.</p>
-  <div class="cardrow c3">
-    <div class="price-card">
-      <h3>Consultation call</h3>
-      <div class="price-big">$49 <small>/ 45 min</small></div>
-      <p>You, us, and your whole situation on the table. Nationality, family, budget, timeline. You leave the call knowing which door fits and exactly what to do next.</p>
-      <a class="btn wa" href="https://wa.me/966550606619?text=Salam%20alaikum%2C%20I%20want%20to%20book%20a%20consultation">Book on WhatsApp</a>
-    </div>
-    <div class="price-card hot">
-      <h3>We handle it</h3>
-      <div class="price-big">from $99 <small>/ application</small></div>
-      <p>Visa applications, university applications, school placement, job-offer checks, Ejar contracts. You send documents, we do the chasing, in Arabic, on the ground.</p>
-      <a class="btn gold" href="pricing.html">See all services</a>
-    </div>
-    <div class="price-card">
-      <h3>Full relocation</h3>
-      <div class="price-big">from $1,499 <small>/ family</small></div>
-      <p>The whole road: route planning, applications, housing before you land, schools, airport pickup, first-month setup. For families who want one hand to hold.</p>
-      <a class="btn wa" href="https://wa.me/966550606619?text=Salam%20alaikum%2C%20I%20want%20to%20ask%20about%20the%20full%20relocation%20package">Ask about it</a>
-    </div>
-  </div>
-
-  <h2>Where will you land?</h2>
-  <div class="cardrow c3">
-    <div class="card">
-      <img src="img/madinah-umbrellas.jpg" alt="The courtyard umbrellas of the Prophet's Mosque in Madinah" loading="lazy">
-      <div class="pad">
-        <h3>Madinah</h3>
-        <p>The city of the Prophet ﷺ. Gentle pace, the cheapest rents of the three, the Islamic University, and schools with an Islamic ethos. Where most students start.</p>
-        <a class="btn gold" href="study.html">The student route</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="img/hero-makkah.jpg" alt="Masjid al-Haram in Makkah" loading="lazy">
-      <div class="pad">
-        <h3>Makkah</h3>
-        <p>Life within reach of the Haram. Umm Al-Qura University, and since 2026 Muslims can even own property in approved zones. Schools are limited; many families commute to Jeddah.</p>
-        <a class="btn gold" href="housing.html">Housing &amp; the new law</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="img/jeddah.jpg" alt="Jeddah corniche at night" loading="lazy">
-      <div class="pad">
-        <h3>Jeddah</h3>
-        <p>The practical base: jobs, international schools, an hour from Makkah. Where most working families settle, and where we are.</p>
-        <a class="btn gold" href="jobs.html">Jobs in the Hijaz</a>
-      </div>
-    </div>
-  </div>
-
-  <h2>Free events and lectures</h2>
-  <p>Every month we run free online sessions: hijrah basics, the student route, and live questions with people who already made the move. Seats are limited on the webinars, registration is one WhatsApp message.</p>
-  <div class="event">
-    <div class="date">Sat<br>1 Aug</div>
-    <div class="what">
-      <h3>Hijrah to Saudi 101</h3>
-      <p>The four legal doors, real costs, and the mistakes that get people deported. Live webinar with Q&amp;A.</p>
-    </div>
-    <span class="tag">FREE</span>
-    <a class="btn wa" href="https://wa.me/966550606619?text=Salam%2C%20register%20me%20for%20Hijrah%20101">Register</a>
-  </div>
-  <p><a href="events.html"><strong>See the full schedule →</strong></a></p>
-
-  <h2>How this works</h2>
-  <p>Read the guides. They are free and we keep them honest, including the parts other services skip, like the SAR 400 monthly fee per dependent or the age limit on scholarships.</p>
-  <p>Ask questions in the <a href="community.html">community groups</a>. Thousands of members, many of whom have already made the move.</p>
-  <p>When you are serious, <a href="pricing.html">book us</a>. We handle applications, connect you with employers or universities, find housing, and sort out the hundred small things that are hard to do from abroad and harder in Arabic. You will know the fee before we start, in shaa Allah.</p>
-
-  <div class="cta">
-    <h3>Ready to talk?</h3>
-    <p>Tell us your situation: nationality, family, what you can work with. We will tell you which door fits.</p>
-    <div class="btnrow">
-      <a class="btn wa" href="https://wa.me/966550606619">WhatsApp us</a>
-      <a class="btn mail" href="mailto:isa@mvpr.org">Email isa@mvpr.org</a>
-    </div>
-  </div>
-
-  <p class="smallprint">We are a private Saudi-based relocation company, focused on the Hijaz: Jeddah, Makkah and Madinah. We are not a government agency and not affiliated with any ministry. Prices and rules on this site were checked in July 2026 against official sources; regulations change, so always confirm on the official portals we link to before acting. Photography: Wikimedia Commons, CC-licensed (credits on each image).</p>
-</main>
+<footer>
+  <span>Makkah &amp; Jeddah</span>
+  <a href="https://wa.me/966550606619">WhatsApp +966 55 060 6619</a>
+  <a href="mailto:isa@mvpr.org">isa@mvpr.org</a>
+  <span>Private company · not a government agency · rules checked July 2026</span>
+  <span lang="ar" dir="rtl">اللهم يسِّر ولا تعسِّر</span>
+</footer>
 
 <script>
 var WA = 'https://wa.me/966550606619?text=';
+
 var TREE = {
-  start: { q: 'Choose what fits you — every path gets a straight answer.', opts: [
-    ['💼 Work', 'work'], ['🎓 Study', 'study'], ['🏢 Business', 'biz'],
-    ['🏠 Property / investment', 'invest'], ['💍 Marriage', 'marriage'],
-    ['✈️ I want to visit first', 'visit'], ['🤷 Not sure yet', 'unsure']
+  start: { step: 'Jeddah · Makkah · Madinah', h: 'Make hijrah to Saudi.', sub: 'Two questions. Then your route, with real 2026 prices, from a team that lives here.', q: 'What do you want?', grid: true, opts: [
+    ['Work here', 'work'], ['Study here', 'study'], ['Build a business', 'biz'], ['Buy property', 'invest'], ['Get married', 'marriage'], ['Visit first', 'visit'], ['Guide me', 'unsure']
   ]},
-  work: { q: 'Work it is. Which describes you?', opts: [
-    ['I have a profession in demand', 'work-skilled'],
-    ['I work in office / admin / sales', 'work-office'],
-    ['I already have a Saudi job offer', 'work-offer']
+  work: { step: 'Question 2', h: 'Who are you?', sub: 'The work route lives or dies on your profession.', opts: [
+    ['Doctor, nurse, engineer, teacher, tech', 'work-skilled'], ['Office, admin, sales', 'work-office'], ['I already hold a Saudi job offer', 'work-offer'], ['← Back', 'start']
   ]},
-  'work-skilled': { a: '<h3>Good news: this is the main road.</h3><p>Healthcare, engineering, tech, teaching and academia are what Saudi imports. The employer must pay your visa and iqama fees by law, and a skilled job title lets you sponsor your family (SAR 400/month per dependent). Salaries are tax-free.</p><p><a href="jobs.html">Where to apply and what it pays</a></p>', wa: 'Salam alaikum, I have an in-demand profession and want to work in Saudi. My field is: ' },
-  'work-office': { a: '<h3>Honest answer: that door is closing.</h3><p>HR, admin, sales and customer service are being reserved for Saudi citizens. Your realistic options are retraining toward a shortage field, opening a real business, or the money routes. Better to hear it now than after a year of applications.</p><p><a href="jobs.html">The Saudization reality</a> · <a href="business.html">The business route</a></p>', wa: 'Salam alaikum, I work in an office role. What are my realistic options for hijrah? My situation: ' },
-  'work-offer': { a: '<h3>Check three things before you sign.</h3><p>One: the employer pays visa and iqama fees, by law. Two: your contract must be registered in Qiwa. Three: your exact job title decides whether your family can join you. We check all three for a flat $149.</p><p><a href="jobs.html#before-you-sign">The checks explained</a> · <a href="pricing.html">Job-offer package</a></p>', wa: 'Salam alaikum, I have a Saudi job offer and want it checked before I sign. ' },
-  study: { q: 'The student route. How old are you?', opts: [
-    ['17–25', 'study-young'], ['26 or older', 'study-older']
+  'work-skilled': { a: true, h: 'Saudi is hiring you.', p: [
+    'These are the shortage fields. Tax-free salaries: licensed teachers make <b>SAR 12–25k a month</b> plus housing. The employer pays your visa and iqama by law, and a skilled title lets your family join you.',
+    'Next step: your CV on the right desks. We know which desks.'
+  ], btns: [['Message us on WhatsApp', 'Salam alaikum, I work in an in-demand field and want to move. My profession: ', 'wa'], ['Jobs guide', 'jobs.html', 'side']] },
+  'work-office': { a: true, h: 'That door is closing. Hear it now.', p: [
+    'Office, admin and sales roles are being reserved for Saudis. A year of applications will likely waste a year.',
+    'Real options: retrain toward a shortage field, open a licensed business, or the investment routes. Brothers have pivoted and are here now.'
+  ], btns: [['Ask about my options', 'Salam alaikum, I work in an office role. What are my realistic options? ', 'wa'], ['The business route', 'business.html', 'side']] },
+  'work-offer': { a: true, h: 'Three checks before you sign.', p: [
+    '<b>One:</b> the employer pays visa and iqama fees, by law. <b>Two:</b> the contract must be registered in Qiwa. <b>Three:</b> your exact job title decides whether your family can come.',
+    'We run all three for a flat <b>$149</b>. Cheaper than one wrong signature.'
+  ], btns: [['Check my offer', 'Salam alaikum, I have a Saudi job offer and want it checked. ', 'wa'], ['The checks', 'jobs.html', 'side']] },
+  study: { step: 'Question 2', h: 'How old are you?', sub: 'One rule decides the whole student route.', opts: [
+    ['17–25', 'study-young'], ['26 or older', 'study-older'], ['← Back', 'start']
   ]},
-  'study-young': { a: '<h3>You are in the golden window.</h3><p>Full scholarships at Saudi universities cover tuition, iqama, housing, healthcare, yearly flights and a monthly stipend. Zero Arabic needed — the Arabic institutes take you from nothing, with the same benefits. Applications run through one portal each spring.</p><p><a href="study.html">How to apply, step by step</a></p>', wa: 'Salam alaikum, I am 17-25 and want to apply for a Saudi university scholarship. ' },
-  'study-older': { a: '<h3>The scholarship window has an age limit, but you have routes.</h3><p>Bachelor\'s scholarships stop at 25. Over that: postgraduate tracks (master\'s under 30, PhD under 35), self-funded study, or residency through work or business with part-time knowledge study in the Haramain.</p><p><a href="study.html">All the options honestly</a></p>', wa: 'Salam alaikum, I am over 25 and interested in studying in Saudi. My situation: ' },
-  biz: { q: 'Business. What are you thinking?', opts: [
-    ['Open my own business', 'biz-own'],
-    ['Partner up with a Saudi', 'biz-partner'],
-    ['I have serious capital to invest', 'biz-invest']
+  'study-young': { a: true, h: 'The golden window.', p: [
+    'Full scholarships: <b>free tuition, iqama, housing, healthcare, flights, monthly stipend</b>. Zero Arabic needed. The universities teach you from nothing, funded from day one. Madinah, Makkah, Jeddah.',
+    'One government portal, one application window each spring. We track it and handle applications for <b>$199</b>.'
+  ], btns: [['Help me apply', 'Salam alaikum, I am 17-25 and want a scholarship. ', 'wa'], ['Student guide', 'study.html', 'side']] },
+  'study-older': { a: true, h: 'That window closed at 25.', p: [
+    'Straight answer. Still open: master\'s under 30, PhD under 35, self-funded study, or residency through work or business. And the study circles of the Haramain are free for every resident.'
+  ], btns: [['My situation', 'Salam alaikum, I am over 25 and interested in studying in Saudi. ', 'wa'], ['All options', 'study.html', 'side']] },
+  biz: { step: 'Question 2', h: 'Which one is you?', sub: 'There is a right way and a prison way. We only do the right way.', opts: [
+    ['I want to own my business', 'biz-own'], ['I want a Saudi partner', 'biz-partner'], ['I have serious capital', 'biz-invest'], ['← Back', 'start']
   ]},
-  'biz-own': { a: '<h3>You can own 100% of it. Legally.</h3><p>A MISA license gives full foreign ownership in most sectors, and your company sponsors your own iqama and your family. Government license fees are currently waived; realistic first-year setup is SAR 15–25k plus your business capital. Six to twelve weeks start to finish.</p><p><a href="business.html">The route, step by step</a></p>', wa: 'Salam alaikum, I want to open my own business in Saudi. My business idea: ' },
-  'biz-partner': { a: '<h3>Careful, akhi. There is one legal way and one prison way.</h3><p>A genuine registered joint venture with you as a documented shareholder: halal and fine. The common "he registers it in his name, you run it" arrangement is tasattur — up to 5 years prison, SAR 5M fines, deportation. We can connect you with real, registered partnership opportunities.</p><p><a href="business.html">Read this before anything else</a></p>', wa: 'Salam alaikum, I am interested in a legal registered partnership with a Saudi. My field: ' },
-  'biz-invest': { a: '<h3>With capital, the doors open wide.</h3><p>SAR 7M invested + 10 jobs = investor Premium Residency for a SAR 4,000 fee. Or SAR 800,000 one-time buys permanent residency for the whole family including parents. Or a SAR 4M property carries residency with it — since 2026, even in approved zones of Makkah and Madinah.</p><p><a href="visas.html#premium">Compare the money routes</a></p>', wa: 'Salam alaikum, I have capital to invest and want to discuss residency options. ' },
-  invest: { q: 'Property and investment. What interests you?', opts: [
-    ['Buy a home in Saudi', 'invest-home'],
-    ['Property in Makkah or Madinah', 'invest-haram'],
-    ['Residency through wealth', 'biz-invest']
+  'biz-own': { a: true, h: 'Own 100% of it. Legally.', p: [
+    'A MISA license gives full foreign ownership in most sectors. Your company sponsors your iqama and your family. License fees currently waived; realistic setup <b>SAR 15–25k</b> plus your capital. Six to twelve weeks.'
+  ], btns: [['My business idea', 'Salam alaikum, I want to open a business in Saudi. My idea: ', 'wa'], ['Business guide', 'business.html', 'side']] },
+  'biz-partner': { a: true, h: 'Careful. One way is halal. One is five years in prison.', p: [
+    'A registered joint venture with your name on the papers: fine. The famous "his name, your business, monthly fee" arrangement is <b>tasattur</b> (up to 5 years, SAR 5M fine, deportation). Enforcement is real.',
+    'We connect people to the registered kind only.'
+  ], btns: [['Legal partnership', 'Salam alaikum, I want a legal registered partnership. My field: ', 'wa'], ['Read first', 'business.html', 'side']] },
+  'biz-invest': { a: true, h: 'Capital opens every door.', p: [
+    '<b>SAR 800,000</b> once: permanent residency, family included, parents included. <b>SAR 4M</b> in property: residency that lasts while you own it. Since 2026 even in approved zones of Makkah and Madinah. <b>SAR 7M</b> invested + 10 jobs: investor residency, SAR 4,000 fee.',
+    'At this level you talk to people, not websites.'
+  ], btns: [['Speak to us', 'Salam alaikum, I have capital and want to discuss residency. ', 'wa'], ['Compare routes', 'visas.html#premium', 'side']] },
+  invest: { step: 'Question 2', h: 'Where?', sub: 'Foreign ownership opened in January 2026. The rules differ by city.', opts: [
+    ['Jeddah or Riyadh', 'invest-home'], ['Makkah or Madinah', 'invest-haram'], ['← Back', 'start']
   ]},
-  'invest-home': { a: '<h3>Since January 2026, foreigners can buy.</h3><p>Designated zones in Riyadh and Jeddah are open to non-Saudi buyers, resident or abroad. Residents can also own one home outside the zones. And at SAR 4M+ the property carries Premium Residency with it. Everything runs through the official REGA platform.</p><p><a href="housing.html">The new law, the zones, the process</a></p>', wa: 'Salam alaikum, I am interested in buying property in Saudi. My budget and city: ' },
-  'invest-haram': { a: '<h3>This is the historic change.</h3><p>Ownership in the holy cities is now open to Muslims — only Muslims — in approved zones, whether you live in Saudi or abroad. A Muslim in Birmingham can own an apartment in Makkah with registered title. Zones are mostly the big Haram-area developments; verify everything against the REGA map before paying anyone.</p><p><a href="housing.html">Details and warnings</a></p>', wa: 'Salam alaikum, I am interested in property in Makkah or Madinah. ' },
-  marriage: { a: '<h3>We run a quiet matrimonial service.</h3><p>Written profiles, wali involved from the first message for sisters, introductions within a community that can vouch for people, and both sides serious about life in a Muslim land. Private throughout.</p><p><a href="marriage.html">How it works</a></p>', wa: 'Salam alaikum, I am interested in the marriage service. I am a (brother/sister): ' },
-  visit: { a: '<h3>Smart. Scout first.</h3><p>The tourist eVisa costs about SAR 535, lasts a year with 90 days per stay, and lets you make Umrah outside Hajj season. See Jeddah, Makkah and Madinah with your own eyes, look at schools and apartments, then decide properly. Apply only on the official portal.</p><p><a href="visas.html#tourist">Tourist visa facts</a> — and we can plan the scouting trip for $49.</p>', wa: 'Salam alaikum, I want to plan a scouting trip to the Hijaz. ' },
-  unsure: { a: '<h3>Then start with the 2-minute check.</h3><p>Four questions about your age, family, work and budget, and it tells you which of the four legal doors realistically fits. Then read the guide for your door, then talk to us.</p><p><a href="tools.html#wizard">Take the check</a> · <a href="visas.html">Or read the four doors first</a></p>', wa: 'Salam alaikum, I am not sure which route fits me. My situation: ' }
+  'invest-home': { a: true, h: 'Open since January.', p: [
+    'Non-Saudis can buy in designated zones, resident or from abroad. Residents may also own one home outside the zones. <b>SAR 4M+</b> of property carries Premium Residency with it: home and legal status in one purchase.',
+    'Everything runs through the official REGA platform. We verify zones and developers before money moves.'
+  ], btns: [['My budget', 'Salam alaikum, I want to buy property. My budget and city: ', 'wa'], ['Housing guide', 'housing.html', 'side']] },
+  'invest-haram': { a: true, h: 'The holy cities. Muslims only. Historic.', p: [
+    'For the first time, Muslims, resident or abroad, can hold registered title in approved zones of Makkah and Madinah. The zones are the big Haram-area developments. Prices are serious. So are the scammers selling "pre-launch" units.',
+    'Verify against the REGA map, or let us do it.'
+  ], btns: [['Verify a project', 'Salam alaikum, I am interested in property near the Haramain. ', 'wa'], ['Details', 'housing.html', 'side']] },
+  marriage: { a: true, h: 'Quiet, vetted, wali involved.', p: [
+    'A matrimonial service inside our community: written profiles, families who can be vouched for, wali involved from the first message for sisters. For people serious about the deen and serious about living in a Muslim land.',
+    'Private throughout.'
+  ], btns: [['Request the form', 'Salam alaikum, I am interested in the marriage service. I am a (brother/sister): ', 'wa'], ['How it works', 'marriage.html', 'side']] },
+  visit: { a: true, h: 'Smart. Scout first.', p: [
+    'Tourist eVisa: <b>~SAR 535</b>, valid a year, 90 days per stay, Umrah outside Hajj season. Walk the neighbourhoods, price the apartments, visit the schools. Then decide.',
+    'We plan scouting trips for <b>$49</b>: areas, appointments, people worth meeting.'
+  ], btns: [['Plan my trip', 'Salam alaikum, I want to plan a scouting trip to the Hijaz. ', 'wa'], ['Visa facts', 'visas.html#tourist', 'side']] },
+  unsure: { a: true, h: 'Four doors. That is the whole truth.', p: [
+    'A job. A scholarship. A real business. Or money. Everything else is a visit, including the tourist visa.',
+    'Tell us who you are and we will point at your door. First message costs nothing.'
+  ], btns: [['My situation', 'Salam alaikum, I am not sure which route fits me. My situation: ', 'wa'], ['The 2-minute check', 'tools.html#wizard', 'side']] }
 };
 
-var tPath = ['start'];
-function tRender() {
-  var node = TREE[tPath[tPath.length - 1]];
-  var q = document.getElementById('t-q'), opts = document.getElementById('t-opts'),
-      ans = document.getElementById('t-answer'), back = document.getElementById('t-back');
+var path = ['start'];
+var el = document.getElementById('screen');
+
+function render() {
+  var node = TREE[path[path.length - 1]];
+  var h = '';
   if (node.opts) {
-    q.textContent = node.q; q.style.display = 'block';
-    opts.innerHTML = ''; opts.style.display = 'flex';
-    node.opts.forEach(function (o) {
-      var l = document.createElement('label');
-      l.textContent = o[0];
-      l.onclick = function () { tPath.push(o[1]); tRender(); };
-      opts.appendChild(l);
-    });
-    ans.classList.remove('show');
+    h += '<div class="step">' + node.step + '</div>';
+    h += '<h1>' + node.h + '</h1>';
+    if (node.sub) h += '<p class="sub">' + node.sub + '</p>';
+    if (node.q) h += '<p class="qline">' + node.q + '</p>';
+    h += '<div class="opts' + (node.grid ? ' grid' : '') + '">' + node.opts.map(function (o, i) {
+      return '<button data-i="' + i + '">' + o[0] + '</button>';
+    }).join('') + '</div>';
   } else {
-    q.style.display = 'none'; opts.style.display = 'none';
-    ans.innerHTML = node.a + '<p><a class="btn wa" href="' + WA + encodeURIComponent(node.wa) + '">Talk to us about this — free first message</a></p>';
-    ans.classList.add('show');
+    h += '<div class="answer"><div class="step">Your route</div>';
+    h += '<h1>' + node.h + '</h1>';
+    h += node.p.map(function (p) { return '<p>' + p + '</p>'; }).join('');
+    h += '<div class="actions">' + node.btns.map(function (b) {
+      var cls = b[2];
+      var href = b[2] === 'wa' ? WA + encodeURIComponent(b[1]) : b[1];
+      return '<a class="' + cls + '" href="' + href + '">' + b[0] + '</a>';
+    }).join('') + '</div>';
+    h += '<a class="back" id="restart">← Start again</a></div>';
   }
-  back.style.display = tPath.length > 1 ? 'inline' : 'none';
+  el.innerHTML = h;
+  el.style.animation = 'none';
+  void el.offsetWidth;
+  el.style.animation = '';
+  if (node.opts) {
+    el.querySelectorAll('.opts button').forEach(function (b) {
+      b.onclick = function () {
+        var o = node.opts[parseInt(b.dataset.i, 10)];
+        if (o[1] === 'start') { path = ['start']; } else { path.push(o[1]); }
+        render();
+      };
+    });
+  } else {
+    document.getElementById('restart').onclick = function () { path = ['start']; render(); };
+  }
 }
-document.getElementById('t-back').onclick = function (e) { e.preventDefault(); tPath.pop(); tRender(); };
-tRender();
+render();
 </script>
-
-<a class="wa-float" href="https://wa.me/966550606619" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-1.7 0-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
-</a>
-
-<footer class="site">
-  <div class="inner">
-    <p><strong>Hijrah to Saudi</strong> · Makkah &amp; Jeddah · <a href="https://wa.me/966550606619">WhatsApp +966 55 060 6619</a> · <a href="mailto:isa@mvpr.org">isa@mvpr.org</a></p>
-    <p>Guides: <a href="visas.html">Visas</a> · <a href="study.html">Study</a> · <a href="jobs.html">Jobs</a> · <a href="housing.html">Housing</a> · <a href="business.html">Business</a> · <a href="marriage.html">Marriage</a> · <a href="schools.html">Schools</a> · <a href="events.html">Events</a> · <a href="pricing.html">Pricing</a> · <a href="community.html">Community</a></p>
-    <p class="ar" lang="ar" dir="rtl">اللهم يسِّر ولا تعسِّر</p>
-  </div>
-</footer>
 </body>
 </html>
