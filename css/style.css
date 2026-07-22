@@ -89,7 +89,6 @@ nav.main a:hover { background: rgba(255,255,255,0.22); }
 
 nav.main a[aria-current="page"] { background: var(--yellow); color: var(--blue-dark); font-weight: 600; }
 
-nav.main a.nav-hot { background: var(--yellow); color: var(--blue-dark); font-weight: 700; }
 
 /* ---------- hero ---------- */
 
