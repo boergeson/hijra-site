@@ -91,7 +91,7 @@ nav.main a {
 
 nav.main a:hover { color: var(--blue-dark); }
 
-nav.main a[aria-current="page"] { color: var(--teal); font-weight: 700; }
+nav.main a[aria-current="page"] { color: var(--teal); }
 
 
 /* ---------- hero ---------- */
@@ -388,7 +388,6 @@ footer.site .ar { color: #8fa5c4; margin-top: 0.8rem; }
   .hero h1 { font-size: 2.7rem; }
   header.site { padding-left: max(1rem, calc((100% - 62rem) / 2)); padding-right: max(1rem, calc((100% - 62rem) / 2)); }
   .topbar { padding-right: max(1rem, calc((100% - 62rem) / 2)); }
-  nav.main a { font-size: 0.92rem; }
   .cardrow.c3 { grid-template-columns: 1fr 1fr 1fr; }
   .cardrow.c4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
   .cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }

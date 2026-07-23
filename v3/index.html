@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Make hijrah to Saudi Arabia | Hijrah to Saudi</title>
 <meta name="description" content="Moving to Saudi Arabia, done properly. Answer two questions and get your route: work, study, business, property or marriage. Real 2026 prices. Team on the ground in the Hijaz.">
+<link rel="stylesheet" href="../css/style.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 
@@ -23,10 +24,10 @@
 html, body { height: 100%; }
 html { overflow-y: scroll; }
 
-.topbar { font-size: 0.8rem; color: var(--ink-soft); text-align: right; padding: 0.35rem 1rem 0; }
-
 body {
   font-family: Inter, "Segoe UI", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
   background: var(--bg);
   color: var(--ink);
   display: flex;
@@ -34,29 +35,17 @@ body {
   min-height: 100vh;
 }
 
-header {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 0.4rem 1.2rem; flex-wrap: wrap;
-  padding: 0.8rem 1rem;
-}
 
-.mark { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; color: var(--ink); }
 
-.mark svg { width: 1.5rem; height: 1.5rem; }
 
-.mark b { font-weight: 900; letter-spacing: -0.02em; font-size: 1.3rem; }
-.mark b span { color: #a8871f; }
-
-header nav { display: flex; gap: 0 0.3rem; flex-wrap: wrap; }
-header nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.88rem; padding: 0.2rem 0.45rem; }
-header nav a:hover { color: var(--teal); }
-header nav a.on { color: var(--teal); font-weight: 700; }
 
 main {
   flex: 1;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  max-width: none;
+  margin: 0;
   padding: 3rem 1.4rem 2.4rem;
 }
 
@@ -151,30 +140,25 @@ footer a { color: var(--ink-soft); }
   .opts.grid { display: grid; grid-template-columns: 1fr 1fr; }
 }
 
-@media (min-width: 760px) {
-  header { padding-left: max(1rem, calc((100% - 62rem) / 2)); padding-right: max(1rem, calc((100% - 62rem) / 2)); }
-  .topbar { padding-right: max(1rem, calc((100% - 62rem) / 2)); }
-}
 </style>
 </head>
 <body>
 <div class="topbar" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</div>
-<header>
-  <a class="mark" href="./">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5">
-      <rect x="5.2" y="5.2" width="13.6" height="13.6"/>
-      <rect x="5.2" y="5.2" width="13.6" height="13.6" transform="rotate(45 12 12)"/>
-    </svg>
-    <b>Hijrah to <span>Saudi</span></b>
-  </a>
-  <nav>
-    <a class="on" href="./">Start</a>
-    <a href="../guides.html">Guides</a>
-    <a href="../tools.html">Tools</a>
-    <a href="../events.html">Events</a>
-    <a href="../pricing.html">Pricing</a>
-    <a href="../contact.html">Contact</a>
-  </nav>
+<header class="site">
+  <div class="brand">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.5" aria-hidden="true"><rect x="5.2" y="5.2" width="13.6" height="13.6"/><rect x="5.2" y="5.2" width="13.6" height="13.6" transform="rotate(45 12 12)"/></svg>
+    <a href="../index.html">Hijrah to <span>Saudi</span></a>
+  </div>
+<nav class="main" aria-label="Main">
+  <ul>
+    <li><a href="./" aria-current="page">Start</a></li>
+    <li><a href="../guides.html">Guides</a></li>
+    <li><a href="../tools.html">Tools</a></li>
+    <li><a href="../events.html">Events</a></li>
+    <li><a href="../pricing.html">Pricing</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
 </header>
 
 <main><div class="screen" id="screen"></div></main>
